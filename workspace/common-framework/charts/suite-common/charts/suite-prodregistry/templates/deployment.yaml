@@ -1,0 +1,115 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: {{ template "suite-prodregistry.fullname" . }}
+  labels:
+    app: {{ template "suite-prodregistry.name" . }}
+    chart: {{ template "suite-prodregistry.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "suite-prodregistry.name" . }}
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ template "suite-prodregistry.name" . }}
+        release: {{ .Release.Name }}
+    spec:
+      initContainers:
+        # Prodregistry is dependant on jwt-keys
+        - name: init-suite-jwt-keys
+          image: "busybox"
+          command: ['sh', '-c', 'until [ "$(wget -qO - suite-jwt-keys:8080/health)" = "{\"status\":\"UP\"}" ]; do echo waiting for myservice; sleep 2; done;']
+        # Workaround to prevent all the services starts at the same time (CloudConfig -> JWT-Key -> IDM -> Password -> Auth -> ProdRegistry -> Gateway)
+        - name: pem-jks-converter
+{{ include "pem-jks-converter" . | indent 10 }}
+          volumeMounts:
+          - name: suite-prodregistry-tls
+            mountPath: /cert
+            readOnly: true
+          - name: ca-key-pair
+            mountPath: /ca
+            readOnly: True
+          - name: suite-prodregistry-jks
+            mountPath: /jks-secrets
+      imagePullSecrets:
+        - name: {{ .Values.global.imagePullSecret }}
+      serviceAccountName: {{ template "suite-prodregistry.name" . }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: {{ .Values.global.registry }}/{{ .Values.global.repository}}/{{ .Values.image.repository }}:{{ .Values.image.tag }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: MY_NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+            - name: MY_POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: MY_POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+            - name: https
+              containerPort: 8443
+              protocol: TCP
+          volumeMounts:
+          - name: suite-prodregistry-tls
+            mountPath: {{ .Values.internalTls.mountPath }}/cert
+            readOnly: true
+          - name: ca-key-pair
+            mountPath: {{ .Values.internalTls.mountPath }}/ca
+            readOnly: true
+          - name: suite-prodregistry-jks
+            mountPath: /tmp/secrets
+            readOnly: true
+#          livenessProbe:
+#          livenessProbe:
+#            httpGet:
+#              path: /
+#              port: http
+#          readinessProbe:
+#            httpGet:
+#              path: /
+#              port: http
+          resources:
+{{ toYaml .Values.resources | indent 12 }}
+    {{- with .Values.nodeSelector }}
+      nodeSelector:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+      volumes:
+      - name: suite-prodregistry-tls
+        secret:
+          secretName: suite-prodregistry-tls
+          items:
+            - key: tls.crt
+              path: certificate.pem
+            - key: tls.key
+              path: private_key.pem
+      - name: ca-key-pair
+        secret:
+          secretName: ca-key-pair
+          items:
+          - key: tls.crt
+            path: ca_certificate.pem
+      - name: suite-prodregistry-jks
+        emptyDir: {}

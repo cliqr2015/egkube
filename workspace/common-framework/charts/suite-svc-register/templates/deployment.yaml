@@ -1,0 +1,63 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: {{ template "suite-svc-register.fullname" . }}
+  labels:
+    app: {{ template "suite-svc-register.name" . }}
+    chart: {{ template "suite-svc-register.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "suite-svc-register.name" . }}
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ template "suite-svc-register.name" . }}
+        release: {{ .Release.Name }}
+    spec:
+      serviceAccountName: {{ template "suite-svc-register.name" . }}
+      imagePullSecrets:
+        - name: {{ .Values.global.imagePullSecret }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.global.registry }}/{{ .Values.global.repository}}/{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+          - name: REGISTRY_ENDPOINT
+            value: {{required ".Values.register.registryEndpoint is required" .Values.register.registryEndpoint }}
+          - name: NAMESPACE
+            value: {{required ".Values.global.namespace is required" .Values.global.namespace }}
+          - name: LABEL_SELECTOR
+            value: {{ .Values.register.labelSelector }}
+          - name: TLS_CA
+            value: "{{ .Values.internalTls.mountPath }}/ca/ca_certificate.pem"
+          - name: TLS_CRT
+            value: "{{ .Values.internalTls.mountPath }}/cert/certificate.pem"
+          - name: TLS_KEY
+            value: "{{ .Values.internalTls.mountPath }}/cert/private_key.pem"
+          volumeMounts:
+          - name: suite-svc-register-tls
+            mountPath: {{ .Values.internalTls.mountPath }}/cert
+            readOnly: true
+          - name: ca-key-pair
+            mountPath: {{ .Values.internalTls.mountPath }}/ca
+            readOnly: true
+      volumes:
+      - name: suite-svc-register-tls
+        secret:
+          secretName: suite-svc-register-tls
+          items:
+            - key: tls.crt
+              path: certificate.pem
+            - key: tls.key
+              path: private_key.pem
+      - name: ca-key-pair
+        secret:
+          secretName: ca-key-pair
+          items:
+          - key: tls.crt
+            path: ca_certificate.pem

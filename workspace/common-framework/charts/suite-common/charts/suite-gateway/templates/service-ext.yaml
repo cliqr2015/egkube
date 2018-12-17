@@ -1,0 +1,21 @@
+{{- if .Values.service2.enabled -}}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "suite-gateway.name" . }}-2
+  labels:
+    app: {{ template "suite-gateway.name" . }}
+    chart: {{ template "suite-gateway.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.global.serviceType }}
+  ports:
+    - port: {{ .Values.service2.httpPort }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "suite-gateway.name" . }}
+    release: {{ .Release.Name }}
+{{- end }}

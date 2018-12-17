@@ -1,0 +1,672 @@
+2018-11-04 12:57:45 INFO     Reading input file input1.json
+2018-11-04 12:57:46 DEBUG    Cowsay was installed successfully ..
+2018-11-04 12:57:47 INFO     0
+2018-11-04 12:57:47 INFO     Connecting to Vcenter = 172.26.236.121
+2018-11-04 12:57:47 INFO     Deploying VM 'smoothkube-32ae05' from vm template 'KubernetesBase'
+2018-11-04 12:57:47 INFO     Creating VM on datastore => TESTDS
+2018-11-04 12:57:47 INFO     IP to be set in for VM 'smoothkube-32ae05' in template is '172.26.236.153'
+2018-11-04 12:57:47 INFO     Deploying VM 'smoothkube-32ae05' on resourcepool 'TestRC' with hostname set as 'smoothkube-32ae05'
+2018-11-04 12:57:47 INFO     VM 'smoothkube-32ae05' deployment triggered from template 'KubernetesBase'
+2018-11-04 12:57:47 INFO     Deploying VM 'smoothkube-b69fff' from vm template 'KubernetesBase'
+2018-11-04 12:57:47 INFO     Creating VM on datastore => TESTDS
+2018-11-04 12:57:47 INFO     IP to be set in for VM 'smoothkube-b69fff' in template is '172.26.236.154'
+2018-11-04 12:57:47 INFO     Deploying VM 'smoothkube-b69fff' on resourcepool 'TestRC' with hostname set as 'smoothkube-b69fff'
+2018-11-04 12:57:47 INFO     VM 'smoothkube-b69fff' deployment triggered from template 'KubernetesBase'
+2018-11-04 12:57:47 INFO     Deploying VM 'smoothkube-62f3c3' from vm template 'KubernetesBase'
+2018-11-04 12:57:47 INFO     Creating VM on datastore => TESTDS
+2018-11-04 12:57:47 INFO     IP to be set in for VM 'smoothkube-62f3c3' in template is '172.26.236.155'
+2018-11-04 12:57:47 INFO     Deploying VM 'smoothkube-62f3c3' on resourcepool 'TestRC' with hostname set as 'smoothkube-62f3c3'
+2018-11-04 12:57:47 INFO     VM 'smoothkube-62f3c3' deployment triggered from template 'KubernetesBase'
+2018-11-04 12:57:47 INFO     Deploying VM 'smoothkube-df0663' from vm template 'KubernetesBase'
+2018-11-04 12:57:47 INFO     Creating VM on datastore => TESTDS
+2018-11-04 12:57:48 INFO     IP to be set in for VM 'smoothkube-df0663' in template is '172.26.236.156'
+2018-11-04 12:57:48 INFO     Deploying VM 'smoothkube-df0663' on resourcepool 'TestRC' with hostname set as 'smoothkube-df0663'
+2018-11-04 12:57:48 INFO     VM 'smoothkube-df0663' deployment triggered from template 'KubernetesBase'
+2018-11-04 12:57:48 DEBUG    Task Details =>task-12145 , VirtualMachine.clone , KubernetesBase
+2018-11-04 12:57:48 DEBUG    'task-12145' progress = 40 %
+2018-11-04 12:57:48 DEBUG    'task-12145' is running.
+2018-11-04 12:57:48 DEBUG    Task Details =>task-12146 , VirtualMachine.clone , KubernetesBase
+2018-11-04 12:57:48 DEBUG    'task-12146' progress = 28 %
+2018-11-04 12:57:48 DEBUG    'task-12146' is running.
+2018-11-04 12:57:48 DEBUG    Task Details =>task-12147 , VirtualMachine.clone , KubernetesBase
+2018-11-04 12:57:48 DEBUG    'task-12147' progress = 13 %
+2018-11-04 12:57:48 DEBUG    'task-12147' is running.
+2018-11-04 12:57:48 DEBUG    Task Details =>task-12148 , VirtualMachine.clone , KubernetesBase
+2018-11-04 12:57:48 DEBUG    'task-12148' progress = 17 %
+2018-11-04 12:57:48 DEBUG    'task-12148' is running.
+2018-11-04 12:57:48 DEBUG    Waiting for 30 seconds
+2018-11-04 12:58:18 DEBUG    Task Details =>task-12145 , VirtualMachine.clone , KubernetesBase
+2018-11-04 12:58:18 DEBUG    'task-12145' progress = 42 %
+2018-11-04 12:58:18 DEBUG    'task-12145' is running.
+2018-11-04 12:58:18 DEBUG    Task Details =>task-12146 , VirtualMachine.clone , KubernetesBase
+2018-11-04 12:58:18 DEBUG    'task-12146' progress = 42 %
+2018-11-04 12:58:18 DEBUG    'task-12146' is running.
+2018-11-04 12:58:18 DEBUG    Task Details =>task-12147 , VirtualMachine.clone , KubernetesBase
+2018-11-04 12:58:18 DEBUG    'task-12147' progress = 41 %
+2018-11-04 12:58:18 DEBUG    'task-12147' is running.
+2018-11-04 12:58:18 DEBUG    Task Details =>task-12148 , VirtualMachine.clone , KubernetesBase
+2018-11-04 12:58:18 DEBUG    'task-12148' progress = 41 %
+2018-11-04 12:58:18 DEBUG    'task-12148' is running.
+2018-11-04 12:58:18 DEBUG    Waiting for 30 seconds
+2018-11-04 12:58:48 DEBUG    Task Details =>task-12145 , VirtualMachine.clone , KubernetesBase
+2018-11-04 12:58:48 DEBUG    'task-12145' progress = 43 %
+2018-11-04 12:58:48 DEBUG    'task-12145' is running.
+2018-11-04 12:58:48 DEBUG    Task Details =>task-12146 , VirtualMachine.clone , KubernetesBase
+2018-11-04 12:58:48 DEBUG    'task-12146' progress = 43 %
+2018-11-04 12:58:48 DEBUG    'task-12146' is running.
+2018-11-04 12:58:48 DEBUG    Task Details =>task-12147 , VirtualMachine.clone , KubernetesBase
+2018-11-04 12:58:48 DEBUG    'task-12147' progress = 43 %
+2018-11-04 12:58:48 DEBUG    'task-12147' is running.
+2018-11-04 12:58:48 DEBUG    Task Details =>task-12148 , VirtualMachine.clone , KubernetesBase
+2018-11-04 12:58:48 DEBUG    'task-12148' progress = 43 %
+2018-11-04 12:58:48 DEBUG    'task-12148' is running.
+2018-11-04 12:58:48 DEBUG    Waiting for 30 seconds
+2018-11-04 12:59:18 DEBUG    Task Details =>task-12145 , VirtualMachine.clone , KubernetesBase
+2018-11-04 12:59:18 DEBUG    'task-12145' progress = 55 %
+2018-11-04 12:59:18 DEBUG    'task-12145' is running.
+2018-11-04 12:59:18 DEBUG    Task Details =>task-12146 , VirtualMachine.clone , KubernetesBase
+2018-11-04 12:59:18 DEBUG    'task-12146' progress = 56 %
+2018-11-04 12:59:18 DEBUG    'task-12146' is running.
+2018-11-04 12:59:18 DEBUG    Task Details =>task-12147 , VirtualMachine.clone , KubernetesBase
+2018-11-04 12:59:18 DEBUG    'task-12147' progress = 51 %
+2018-11-04 12:59:18 DEBUG    'task-12147' is running.
+2018-11-04 12:59:18 DEBUG    Task Details =>task-12148 , VirtualMachine.clone , KubernetesBase
+2018-11-04 12:59:18 DEBUG    'task-12148' progress = 51 %
+2018-11-04 12:59:18 DEBUG    'task-12148' is running.
+2018-11-04 12:59:18 DEBUG    Waiting for 30 seconds
+2018-11-04 12:59:48 DEBUG    Task Details =>task-12145 , VirtualMachine.clone , KubernetesBase
+2018-11-04 12:59:48 DEBUG    'task-12145' progress = 87 %
+2018-11-04 12:59:48 DEBUG    'task-12145' is running.
+2018-11-04 12:59:48 DEBUG    Task Details =>task-12146 , VirtualMachine.clone , KubernetesBase
+2018-11-04 12:59:48 DEBUG    'task-12146' progress = 88 %
+2018-11-04 12:59:48 DEBUG    'task-12146' is running.
+2018-11-04 12:59:48 DEBUG    Task Details =>task-12147 , VirtualMachine.clone , KubernetesBase
+2018-11-04 12:59:48 DEBUG    'task-12147' progress = 87 %
+2018-11-04 12:59:48 DEBUG    'task-12147' is running.
+2018-11-04 12:59:48 DEBUG    Task Details =>task-12148 , VirtualMachine.clone , KubernetesBase
+2018-11-04 12:59:49 DEBUG    'task-12148' progress = 85 %
+2018-11-04 12:59:49 DEBUG    'task-12148' is running.
+2018-11-04 12:59:49 DEBUG    Waiting for 30 seconds
+2018-11-04 13:00:19 DEBUG    Task Details =>task-12145 , VirtualMachine.clone , KubernetesBase
+2018-11-04 13:00:19 DEBUG    'task-12145' is done.
+2018-11-04 13:00:19 DEBUG    Task Details =>task-12146 , VirtualMachine.clone , KubernetesBase
+2018-11-04 13:00:19 DEBUG    'task-12146' is done.
+2018-11-04 13:00:19 DEBUG    Task Details =>task-12147 , VirtualMachine.clone , KubernetesBase
+2018-11-04 13:00:19 DEBUG    'task-12147' is done.
+2018-11-04 13:00:19 DEBUG    Task Details =>task-12148 , VirtualMachine.clone , KubernetesBase
+2018-11-04 13:00:19 DEBUG    'task-12148' is done.
+2018-11-04 13:00:19 DEBUG    Task Result =>'vim.VirtualMachine:vm-1635'
+2018-11-04 13:00:19 DEBUG    'task-12145' completed successfully
+2018-11-04 13:00:19 DEBUG    Task Result =>'vim.VirtualMachine:vm-1636'
+2018-11-04 13:00:19 DEBUG    'task-12146' completed successfully
+2018-11-04 13:00:19 DEBUG    Task Result =>'vim.VirtualMachine:vm-1637'
+2018-11-04 13:00:19 DEBUG    'task-12147' completed successfully
+2018-11-04 13:00:19 DEBUG    Task Result =>'vim.VirtualMachine:vm-1638'
+2018-11-04 13:00:19 DEBUG    'task-12148' completed successfully
+2018-11-04 13:00:19 DEBUG    VM clone task operation completed sucessfully
+2018-11-04 13:00:19 DEBUG    Connecting VM 'smoothkube-32ae05' to network 'mgmt236'
+2018-11-04 13:00:19 DEBUG    Connecting VM 'smoothkube-b69fff' to network 'mgmt236'
+2018-11-04 13:00:19 DEBUG    Connecting VM 'smoothkube-62f3c3' to network 'mgmt236'
+2018-11-04 13:00:19 DEBUG    Connecting VM 'smoothkube-df0663' to network 'mgmt236'
+2018-11-04 13:00:19 DEBUG    Task Details =>task-12149 , VirtualMachine.reconfigure , smoothkube-32ae05
+2018-11-04 13:00:19 DEBUG    'task-12149' is done.
+2018-11-04 13:00:19 DEBUG    Task Details =>task-12150 , VirtualMachine.reconfigure , smoothkube-b69fff
+2018-11-04 13:00:19 DEBUG    'task-12150' progress = 98 %
+2018-11-04 13:00:19 DEBUG    'task-12150' is running.
+2018-11-04 13:00:19 DEBUG    Task Details =>task-12151 , VirtualMachine.reconfigure , smoothkube-62f3c3
+2018-11-04 13:00:19 DEBUG    'task-12151' progress = 98 %
+2018-11-04 13:00:19 DEBUG    'task-12151' is running.
+2018-11-04 13:00:19 DEBUG    Task Details =>task-12152 , VirtualMachine.reconfigure , smoothkube-df0663
+2018-11-04 13:00:19 DEBUG    'task-12152' progress = 13 %
+2018-11-04 13:00:19 DEBUG    'task-12152' is running.
+2018-11-04 13:00:19 DEBUG    Waiting for 10 seconds
+2018-11-04 13:00:29 DEBUG    Task Details =>task-12149 , VirtualMachine.reconfigure , smoothkube-32ae05
+2018-11-04 13:00:29 DEBUG    'task-12149' is done.
+2018-11-04 13:00:29 DEBUG    Task Details =>task-12150 , VirtualMachine.reconfigure , smoothkube-b69fff
+2018-11-04 13:00:29 DEBUG    'task-12150' is done.
+2018-11-04 13:00:30 DEBUG    Task Details =>task-12151 , VirtualMachine.reconfigure , smoothkube-62f3c3
+2018-11-04 13:00:30 DEBUG    'task-12151' is done.
+2018-11-04 13:00:30 DEBUG    Task Details =>task-12152 , VirtualMachine.reconfigure , smoothkube-df0663
+2018-11-04 13:00:30 DEBUG    'task-12152' is done.
+2018-11-04 13:00:30 DEBUG    Task Result =>None
+2018-11-04 13:00:30 DEBUG    'task-12149' completed successfully
+2018-11-04 13:00:30 DEBUG    Task Result =>None
+2018-11-04 13:00:30 DEBUG    'task-12150' completed successfully
+2018-11-04 13:00:30 DEBUG    Task Result =>None
+2018-11-04 13:00:30 DEBUG    'task-12151' completed successfully
+2018-11-04 13:00:30 DEBUG    Task Result =>None
+2018-11-04 13:00:30 DEBUG    'task-12152' completed successfully
+2018-11-04 13:00:30 DEBUG    Change PortGroup operation completed sucessfully
+2018-11-04 13:00:30 DEBUG    Powering on VM 'smoothkube-32ae05 ...'
+2018-11-04 13:00:30 DEBUG    Powering on VM 'smoothkube-b69fff ...'
+2018-11-04 13:00:30 DEBUG    Powering on VM 'smoothkube-62f3c3 ...'
+2018-11-04 13:00:30 DEBUG    Powering on VM 'smoothkube-df0663 ...'
+2018-11-04 13:00:30 DEBUG    Task Details =>task-12153 , VirtualMachine.powerOn , smoothkube-32ae05
+2018-11-04 13:00:30 DEBUG    'task-12153' progress = 66 %
+2018-11-04 13:00:30 DEBUG    'task-12153' is running.
+2018-11-04 13:00:30 DEBUG    Task Details =>task-12154 , VirtualMachine.powerOn , smoothkube-b69fff
+2018-11-04 13:00:30 DEBUG    'task-12154' progress = 66 %
+2018-11-04 13:00:30 DEBUG    'task-12154' is running.
+2018-11-04 13:00:30 DEBUG    Task Details =>task-12155 , VirtualMachine.powerOn , smoothkube-62f3c3
+2018-11-04 13:00:30 DEBUG    'task-12155' progress = 66 %
+2018-11-04 13:00:30 DEBUG    'task-12155' is running.
+2018-11-04 13:00:30 DEBUG    Task Details =>task-12156 , VirtualMachine.powerOn , smoothkube-df0663
+2018-11-04 13:00:30 DEBUG    'task-12156' progress = 66 %
+2018-11-04 13:00:30 DEBUG    'task-12156' is running.
+2018-11-04 13:00:30 DEBUG    Waiting for 10 seconds
+2018-11-04 13:00:40 DEBUG    Task Details =>task-12153 , VirtualMachine.powerOn , smoothkube-32ae05
+2018-11-04 13:00:40 DEBUG    'task-12153' is done.
+2018-11-04 13:00:40 DEBUG    Task Details =>task-12154 , VirtualMachine.powerOn , smoothkube-b69fff
+2018-11-04 13:00:40 DEBUG    'task-12154' is done.
+2018-11-04 13:00:40 DEBUG    Task Details =>task-12155 , VirtualMachine.powerOn , smoothkube-62f3c3
+2018-11-04 13:00:40 DEBUG    'task-12155' is done.
+2018-11-04 13:00:40 DEBUG    Task Details =>task-12156 , VirtualMachine.powerOn , smoothkube-df0663
+2018-11-04 13:00:40 DEBUG    'task-12156' is done.
+2018-11-04 13:00:40 DEBUG    Task Result =>None
+2018-11-04 13:00:40 DEBUG    'task-12153' completed successfully
+2018-11-04 13:00:40 DEBUG    Task Result =>None
+2018-11-04 13:00:40 DEBUG    'task-12154' completed successfully
+2018-11-04 13:00:40 DEBUG    Task Result =>None
+2018-11-04 13:00:40 DEBUG    'task-12155' completed successfully
+2018-11-04 13:00:40 DEBUG    Task Result =>None
+2018-11-04 13:00:40 DEBUG    'task-12156' completed successfully
+2018-11-04 13:00:40 DEBUG    Power On VM operation completed sucessfully
+2018-11-04 13:00:40 INFO
+2018-11-04 13:00:40 INFO     +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:00:40 INFO     +++++++++++++++++++++++++    Fetching IP address of all VM's    +++++++++++++++++++++++++
+2018-11-04 13:00:40 INFO     +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:00:40 INFO
+2018-11-04 13:00:40 INFO     Fetching Ip Address of VM => smoothkube-32ae05
+2018-11-04 13:00:40 WARNING  Invalid IP detected. Retrying after 60 seconds
+2018-11-04 13:01:41 WARNING  Invalid IP detected. Retrying after 60 seconds
+2018-11-04 13:02:41 INFO     IP Address of VM smoothkube-32ae05 : 172.26.236.153
+2018-11-04 13:02:41 INFO     Fetching Ip Address of VM => smoothkube-b69fff
+2018-11-04 13:02:41 INFO     IP Address of VM smoothkube-b69fff : 172.26.236.154
+2018-11-04 13:02:41 INFO     Fetching Ip Address of VM => smoothkube-62f3c3
+2018-11-04 13:02:41 INFO     IP Address of VM smoothkube-62f3c3 : 172.26.236.155
+2018-11-04 13:02:41 INFO     Fetching Ip Address of VM => smoothkube-df0663
+2018-11-04 13:02:41 INFO     IP Address of VM smoothkube-df0663 : 172.26.236.156
+2018-11-04 13:02:41 INFO     Disconnecting from vcenter
+2018-11-04 13:02:41 INFO
+2018-11-04 13:02:41 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:02:41 INFO     +++++++++++++++++++++++++    Kubeadm init    +++++++++++++++++++++++++
+2018-11-04 13:02:41 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:02:41 INFO
+2018-11-04 13:02:41 DEBUG    Initializing kubeadm int on master smoothkube-32ae05
+2018-11-04 13:02:41 DEBUG    >>> cmd executed = kubeadm init --pod-network-cidr=192.168.0.0/16
+2018-11-04 13:03:36 INFO     [init] using Kubernetes version: v1.12.2
+2018-11-04 13:03:36 INFO     [preflight] running pre-flight checks
+2018-11-04 13:03:36 INFO     [preflight/images] Pulling images required for setting up a Kubernetes cluster
+2018-11-04 13:03:36 INFO     [preflight/images] This might take a minute or two, depending on the speed of your internet connection
+2018-11-04 13:03:36 INFO     [preflight/images] You can also perform this action in beforehand using 'kubeadm config images pull'
+2018-11-04 13:03:36 INFO     [kubelet] Writing kubelet environment file with flags to file "/var/lib/kubelet/kubeadm-flags.env"
+2018-11-04 13:03:36 INFO     [kubelet] Writing kubelet configuration to file "/var/lib/kubelet/config.yaml"
+2018-11-04 13:03:36 INFO     [preflight] Activating the kubelet service
+2018-11-04 13:03:36 INFO     [certificates] Generated ca certificate and key.
+2018-11-04 13:03:36 INFO     [certificates] Generated apiserver certificate and key.
+2018-11-04 13:03:36 INFO     [certificates] apiserver serving cert is signed for DNS names [smoothkube-32ae05 kubernetes kubernetes.default kubernetes.default.svc kubernetes.default.svc.cluster.local] and IPs [10.96.0.1 172.26.236.153]
+2018-11-04 13:03:36 INFO     [certificates] Generated apiserver-kubelet-client certificate and key.
+2018-11-04 13:03:36 INFO     [certificates] Generated etcd/ca certificate and key.
+2018-11-04 13:03:36 INFO     [certificates] Generated etcd/server certificate and key.
+2018-11-04 13:03:36 INFO     [certificates] etcd/server serving cert is signed for DNS names [smoothkube-32ae05 localhost] and IPs [127.0.0.1 ::1]
+2018-11-04 13:03:36 INFO     [certificates] Generated etcd/peer certificate and key.
+2018-11-04 13:03:36 INFO     [certificates] etcd/peer serving cert is signed for DNS names [smoothkube-32ae05 localhost] and IPs [172.26.236.153 127.0.0.1 ::1]
+2018-11-04 13:03:36 INFO     [certificates] Generated etcd/healthcheck-client certificate and key.
+2018-11-04 13:03:36 INFO     [certificates] Generated apiserver-etcd-client certificate and key.
+2018-11-04 13:03:36 INFO     [certificates] Generated front-proxy-ca certificate and key.
+2018-11-04 13:03:36 INFO     [certificates] Generated front-proxy-client certificate and key.
+2018-11-04 13:03:36 INFO     [certificates] valid certificates and keys now exist in "/etc/kubernetes/pki"
+2018-11-04 13:03:36 INFO     [certificates] Generated sa key and public key.
+2018-11-04 13:03:36 INFO     [kubeconfig] Wrote KubeConfig file to disk: "/etc/kubernetes/admin.conf"
+2018-11-04 13:03:36 INFO     [kubeconfig] Wrote KubeConfig file to disk: "/etc/kubernetes/kubelet.conf"
+2018-11-04 13:03:36 INFO     [kubeconfig] Wrote KubeConfig file to disk: "/etc/kubernetes/controller-manager.conf"
+2018-11-04 13:03:36 INFO     [kubeconfig] Wrote KubeConfig file to disk: "/etc/kubernetes/scheduler.conf"
+2018-11-04 13:03:36 INFO     [controlplane] wrote Static Pod manifest for component kube-apiserver to "/etc/kubernetes/manifests/kube-apiserver.yaml"
+2018-11-04 13:03:36 INFO     [controlplane] wrote Static Pod manifest for component kube-controller-manager to "/etc/kubernetes/manifests/kube-controller-manager.yaml"
+2018-11-04 13:03:36 INFO     [controlplane] wrote Static Pod manifest for component kube-scheduler to "/etc/kubernetes/manifests/kube-scheduler.yaml"
+2018-11-04 13:03:36 INFO     [etcd] Wrote Static Pod manifest for a local etcd instance to "/etc/kubernetes/manifests/etcd.yaml"
+2018-11-04 13:03:36 INFO     [init] waiting for the kubelet to boot up the control plane as Static Pods from directory "/etc/kubernetes/manifests"
+2018-11-04 13:03:36 INFO     [init] this might take a minute or longer if the control plane images have to be pulled
+2018-11-04 13:03:36 INFO     [apiclient] All control plane components are healthy after 24.011280 seconds
+2018-11-04 13:03:36 INFO     [uploadconfig] storing the configuration used in ConfigMap "kubeadm-config" in the "kube-system" Namespace
+2018-11-04 13:03:36 INFO     [kubelet] Creating a ConfigMap "kubelet-config-1.12" in namespace kube-system with the configuration for the kubelets in the cluster
+2018-11-04 13:03:36 INFO     [markmaster] Marking the node smoothkube-32ae05 as master by adding the label "node-role.kubernetes.io/master=''"
+2018-11-04 13:03:36 INFO     [markmaster] Marking the node smoothkube-32ae05 as master by adding the taints [node-role.kubernetes.io/master:NoSchedule]
+2018-11-04 13:03:36 INFO     [patchnode] Uploading the CRI Socket information "/var/run/dockershim.sock" to the Node API object "smoothkube-32ae05" as an annotation
+2018-11-04 13:03:36 INFO     [bootstraptoken] using token: hmb4ia.ag40khe5ifbixsz5
+2018-11-04 13:03:36 INFO     [bootstraptoken] configured RBAC rules to allow Node Bootstrap tokens to post CSRs in order for nodes to get long term certificate credentials
+2018-11-04 13:03:36 INFO     [bootstraptoken] configured RBAC rules to allow the csrapprover controller automatically approve CSRs from a Node Bootstrap Token
+2018-11-04 13:03:36 INFO     [bootstraptoken] configured RBAC rules to allow certificate rotation for all node client certificates in the cluster
+2018-11-04 13:03:36 INFO     [bootstraptoken] creating the "cluster-info" ConfigMap in the "kube-public" namespace
+2018-11-04 13:03:36 INFO     [addons] Applied essential addon: CoreDNS
+2018-11-04 13:03:36 INFO     [addons] Applied essential addon: kube-proxy
+2018-11-04 13:03:36 INFO
+2018-11-04 13:03:36 INFO     Your Kubernetes master has initialized successfully!
+2018-11-04 13:03:36 INFO
+2018-11-04 13:03:36 INFO     To start using your cluster, you need to run the following as a regular user:
+2018-11-04 13:03:36 INFO
+2018-11-04 13:03:36 INFO     mkdir -p $HOME/.kube
+2018-11-04 13:03:36 INFO     sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+2018-11-04 13:03:36 INFO     sudo chown $(id -u):$(id -g) $HOME/.kube/config
+2018-11-04 13:03:36 INFO
+2018-11-04 13:03:36 INFO     You should now deploy a pod network to the cluster.
+2018-11-04 13:03:36 INFO     Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
+2018-11-04 13:03:36 INFO     https://kubernetes.io/docs/concepts/cluster-administration/addons/
+2018-11-04 13:03:36 INFO
+2018-11-04 13:03:36 INFO     You can now join any number of machines by running the following on each node
+2018-11-04 13:03:36 INFO     as root:
+2018-11-04 13:03:36 INFO
+2018-11-04 13:03:36 INFO     kubeadm join 172.26.236.153:6443 --token hmb4ia.ag40khe5ifbixsz5 --discovery-token-ca-cert-hash sha256:d9cdd5af06c7c4d6fee6683e63a32e252a1678e3e6d0fdcb03d6d352b4941331
+2018-11-04 13:03:36 INFO
+2018-11-04 13:03:36 INFO
+2018-11-04 13:03:36 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:03:36 INFO     +++++++++++++++++++++++++    Generate join string    +++++++++++++++++++++++++
+2018-11-04 13:03:36 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:03:36 INFO
+2018-11-04 13:03:36 DEBUG    Generating token on master smoothkube-32ae05
+2018-11-04 13:03:36 DEBUG    >>>> cmd executed = kubeadm token create --print-join-command
+2018-11-04 13:03:37 DEBUG    kubeadm join 172.26.236.153:6443 --token jz2rgl.3jhz3ocvci28wfpf --discovery-token-ca-cert-hash sha256:d9cdd5af06c7c4d6fee6683e63a32e252a1678e3e6d0fdcb03d6d352b4941331
+2018-11-04 13:03:37 INFO
+2018-11-04 13:03:37 INFO     +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:03:37 INFO     +++++++++++++++++++++++++    VM 'smoothkube-b69fff' joining master 'smoothkube-32ae05'    +++++++++++++++++++++++++
+2018-11-04 13:03:37 INFO     +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:03:37 INFO
+2018-11-04 13:03:37 DEBUG    smoothkube-b69fff joining k8 master
+2018-11-04 13:03:37 DEBUG    >>> cmd executed = kubeadm join 172.26.236.153:6443 --token jz2rgl.3jhz3ocvci28wfpf --discovery-token-ca-cert-hash sha256:d9cdd5af06c7c4d6fee6683e63a32e252a1678e3e6d0fdcb03d6d352b4941331
+2018-11-04 13:03:56 INFO     [preflight] running pre-flight checks
+2018-11-04 13:03:56 INFO     [discovery] Trying to connect to API Server "172.26.236.153:6443"
+2018-11-04 13:03:56 INFO     [discovery] Created cluster-info discovery client, requesting info from "https://172.26.236.153:6443"
+2018-11-04 13:03:56 INFO     [discovery] Failed to connect to API Server "172.26.236.153:6443": token id "jz2rgl" is invalid for this cluster or it has expired. Use "kubeadm token create" on the master node to creating a new valid token
+2018-11-04 13:03:56 INFO     [discovery] Trying to connect to API Server "172.26.236.153:6443"
+2018-11-04 13:03:56 INFO     [discovery] Created cluster-info discovery client, requesting info from "https://172.26.236.153:6443"
+2018-11-04 13:03:56 INFO     [discovery] Failed to connect to API Server "172.26.236.153:6443": token id "jz2rgl" is invalid for this cluster or it has expired. Use "kubeadm token create" on the master node to creating a new valid token
+2018-11-04 13:03:56 INFO     [discovery] Trying to connect to API Server "172.26.236.153:6443"
+2018-11-04 13:03:56 INFO     [discovery] Created cluster-info discovery client, requesting info from "https://172.26.236.153:6443"
+2018-11-04 13:03:56 INFO     [discovery] Failed to connect to API Server "172.26.236.153:6443": token id "jz2rgl" is invalid for this cluster or it has expired. Use "kubeadm token create" on the master node to creating a new valid token
+2018-11-04 13:03:56 INFO     [discovery] Trying to connect to API Server "172.26.236.153:6443"
+2018-11-04 13:03:56 INFO     [discovery] Created cluster-info discovery client, requesting info from "https://172.26.236.153:6443"
+2018-11-04 13:03:56 INFO     [discovery] Requesting info from "https://172.26.236.153:6443" again to validate TLS against the pinned public key
+2018-11-04 13:03:56 INFO     [discovery] Cluster info signature and contents are valid and TLS certificate validates against pinned roots, will use API Server "172.26.236.153:6443"
+2018-11-04 13:03:56 INFO     [discovery] Successfully established connection with API Server "172.26.236.153:6443"
+2018-11-04 13:03:56 INFO     [kubelet] Downloading configuration for the kubelet from the "kubelet-config-1.12" ConfigMap in the kube-system namespace
+2018-11-04 13:03:56 INFO     [kubelet] Writing kubelet configuration to file "/var/lib/kubelet/config.yaml"
+2018-11-04 13:03:56 INFO     [kubelet] Writing kubelet environment file with flags to file "/var/lib/kubelet/kubeadm-flags.env"
+2018-11-04 13:03:56 INFO     [preflight] Activating the kubelet service
+2018-11-04 13:03:56 INFO     [tlsbootstrap] Waiting for the kubelet to perform the TLS Bootstrap...
+2018-11-04 13:03:56 INFO     [patchnode] Uploading the CRI Socket information "/var/run/dockershim.sock" to the Node API object "smoothkube-b69fff" as an annotation
+2018-11-04 13:03:56 INFO
+2018-11-04 13:03:56 INFO     This node has joined the cluster:
+2018-11-04 13:03:56 INFO     * Certificate signing request was sent to apiserver and a response was received.
+2018-11-04 13:03:56 INFO     * The Kubelet was informed of the new secure connection details.
+2018-11-04 13:03:56 INFO
+2018-11-04 13:03:56 INFO     Run 'kubectl get nodes' on the master to see this node join the cluster.
+2018-11-04 13:03:56 INFO
+2018-11-04 13:03:56 INFO
+2018-11-04 13:03:56 INFO     +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:03:56 INFO     +++++++++++++++++++++++++    VM 'smoothkube-62f3c3' joining master 'smoothkube-32ae05'    +++++++++++++++++++++++++
+2018-11-04 13:03:56 INFO     +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:03:56 INFO
+2018-11-04 13:03:56 DEBUG    smoothkube-62f3c3 joining k8 master
+2018-11-04 13:03:56 DEBUG    >>> cmd executed = kubeadm join 172.26.236.153:6443 --token jz2rgl.3jhz3ocvci28wfpf --discovery-token-ca-cert-hash sha256:d9cdd5af06c7c4d6fee6683e63a32e252a1678e3e6d0fdcb03d6d352b4941331
+2018-11-04 13:04:01 INFO     [preflight] running pre-flight checks
+2018-11-04 13:04:01 INFO     [discovery] Trying to connect to API Server "172.26.236.153:6443"
+2018-11-04 13:04:01 INFO     [discovery] Created cluster-info discovery client, requesting info from "https://172.26.236.153:6443"
+2018-11-04 13:04:01 INFO     [discovery] Requesting info from "https://172.26.236.153:6443" again to validate TLS against the pinned public key
+2018-11-04 13:04:01 INFO     [discovery] Cluster info signature and contents are valid and TLS certificate validates against pinned roots, will use API Server "172.26.236.153:6443"
+2018-11-04 13:04:01 INFO     [discovery] Successfully established connection with API Server "172.26.236.153:6443"
+2018-11-04 13:04:01 INFO     [kubelet] Downloading configuration for the kubelet from the "kubelet-config-1.12" ConfigMap in the kube-system namespace
+2018-11-04 13:04:01 INFO     [kubelet] Writing kubelet configuration to file "/var/lib/kubelet/config.yaml"
+2018-11-04 13:04:01 INFO     [kubelet] Writing kubelet environment file with flags to file "/var/lib/kubelet/kubeadm-flags.env"
+2018-11-04 13:04:01 INFO     [preflight] Activating the kubelet service
+2018-11-04 13:04:01 INFO     [tlsbootstrap] Waiting for the kubelet to perform the TLS Bootstrap...
+2018-11-04 13:04:01 INFO     [patchnode] Uploading the CRI Socket information "/var/run/dockershim.sock" to the Node API object "smoothkube-62f3c3" as an annotation
+2018-11-04 13:04:01 INFO
+2018-11-04 13:04:01 INFO     This node has joined the cluster:
+2018-11-04 13:04:01 INFO     * Certificate signing request was sent to apiserver and a response was received.
+2018-11-04 13:04:01 INFO     * The Kubelet was informed of the new secure connection details.
+2018-11-04 13:04:01 INFO
+2018-11-04 13:04:01 INFO     Run 'kubectl get nodes' on the master to see this node join the cluster.
+2018-11-04 13:04:01 INFO
+2018-11-04 13:04:01 INFO
+2018-11-04 13:04:01 INFO     +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:04:01 INFO     +++++++++++++++++++++++++    VM 'smoothkube-df0663' joining master 'smoothkube-32ae05'    +++++++++++++++++++++++++
+2018-11-04 13:04:01 INFO     +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:04:01 INFO
+2018-11-04 13:04:01 DEBUG    smoothkube-df0663 joining k8 master
+2018-11-04 13:04:01 DEBUG    >>> cmd executed = kubeadm join 172.26.236.153:6443 --token jz2rgl.3jhz3ocvci28wfpf --discovery-token-ca-cert-hash sha256:d9cdd5af06c7c4d6fee6683e63a32e252a1678e3e6d0fdcb03d6d352b4941331
+2018-11-04 13:04:06 INFO     [preflight] running pre-flight checks
+2018-11-04 13:04:06 INFO     [discovery] Trying to connect to API Server "172.26.236.153:6443"
+2018-11-04 13:04:06 INFO     [discovery] Created cluster-info discovery client, requesting info from "https://172.26.236.153:6443"
+2018-11-04 13:04:06 INFO     [discovery] Requesting info from "https://172.26.236.153:6443" again to validate TLS against the pinned public key
+2018-11-04 13:04:06 INFO     [discovery] Cluster info signature and contents are valid and TLS certificate validates against pinned roots, will use API Server "172.26.236.153:6443"
+2018-11-04 13:04:06 INFO     [discovery] Successfully established connection with API Server "172.26.236.153:6443"
+2018-11-04 13:04:06 INFO     [kubelet] Downloading configuration for the kubelet from the "kubelet-config-1.12" ConfigMap in the kube-system namespace
+2018-11-04 13:04:06 INFO     [kubelet] Writing kubelet configuration to file "/var/lib/kubelet/config.yaml"
+2018-11-04 13:04:06 INFO     [kubelet] Writing kubelet environment file with flags to file "/var/lib/kubelet/kubeadm-flags.env"
+2018-11-04 13:04:06 INFO     [preflight] Activating the kubelet service
+2018-11-04 13:04:06 INFO     [tlsbootstrap] Waiting for the kubelet to perform the TLS Bootstrap...
+2018-11-04 13:04:06 INFO     [patchnode] Uploading the CRI Socket information "/var/run/dockershim.sock" to the Node API object "smoothkube-df0663" as an annotation
+2018-11-04 13:04:06 INFO
+2018-11-04 13:04:06 INFO     This node has joined the cluster:
+2018-11-04 13:04:06 INFO     * Certificate signing request was sent to apiserver and a response was received.
+2018-11-04 13:04:06 INFO     * The Kubelet was informed of the new secure connection details.
+2018-11-04 13:04:06 INFO
+2018-11-04 13:04:06 INFO     Run 'kubectl get nodes' on the master to see this node join the cluster.
+2018-11-04 13:04:06 INFO
+2018-11-04 13:04:06 INFO
+2018-11-04 13:04:06 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:04:06 INFO     +++++++++++++++++++++++++    Setting up kubectl on master 'smoothkube-32ae05'    +++++++++++++++++++++++++
+2018-11-04 13:04:06 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:04:06 INFO
+2018-11-04 13:04:06 DEBUG    CMD = mkdir -p $HOME/.kube
+2018-11-04 13:04:06 DEBUG    >>> cmd executed = mkdir -p $HOME/.kube
+2018-11-04 13:04:07 DEBUG    CMD = sudo cp  /etc/kubernetes/admin.conf $HOME/.kube/config
+2018-11-04 13:04:07 DEBUG    >>> cmd executed = sudo cp  /etc/kubernetes/admin.conf $HOME/.kube/config
+2018-11-04 13:04:07 DEBUG    CMD = sudo chown $(id -u):$(id -g) $HOME/.kube/config
+2018-11-04 13:04:07 DEBUG    >>> cmd executed = sudo chown $(id -u):$(id -g) $HOME/.kube/config
+2018-11-04 13:04:08 INFO
+2018-11-04 13:04:08 INFO     +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:04:08 INFO     +++++++++++++++++++++++++    Node status    +++++++++++++++++++++++++
+2018-11-04 13:04:08 INFO     +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:04:08 INFO
+2018-11-04 13:04:08 DEBUG    K8 node status
+2018-11-04 13:04:08 DEBUG    >>> cmd executed = kubectl get nodes
+2018-11-04 13:04:09 INFO     NAME                STATUS     ROLES    AGE   VERSION
+2018-11-04 13:04:09 INFO     smoothkube-32ae05   NotReady   master   35s   v1.12.2
+2018-11-04 13:04:09 INFO     smoothkube-62f3c3   NotReady   <none>   8s    v1.12.2
+2018-11-04 13:04:09 INFO     smoothkube-b69fff   NotReady   <none>   13s   v1.12.2
+2018-11-04 13:04:09 INFO     smoothkube-df0663   NotReady   <none>   3s    v1.12.2
+2018-11-04 13:04:09 INFO
+2018-11-04 13:04:09 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:04:09 INFO     +++++++++++++++++++++++++    Deploying calico network addon    +++++++++++++++++++++++++
+2018-11-04 13:04:09 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:04:09 INFO
+2018-11-04 13:04:09 DEBUG    Deploying Calico accounts
+2018-11-04 13:04:09 DEBUG    >>> cmd executed = kubectl apply -f https://docs.projectcalico.org/v3.3/getting-started/kubernetes/installation/hosted/rbac-kdd.yaml
+2018-11-04 13:04:10 INFO     clusterrole.rbac.authorization.k8s.io/calico-node created
+2018-11-04 13:04:10 INFO     clusterrolebinding.rbac.authorization.k8s.io/calico-node created
+2018-11-04 13:04:10 DEBUG    Deploying Calico
+2018-11-04 13:04:10 DEBUG    >>> cmd executed = kubectl apply -f https://docs.projectcalico.org/v3.3/getting-started/kubernetes/installation/hosted/kubernetes-datastore/calico-networking/1.7/calico.yaml
+2018-11-04 13:04:11 INFO     configmap/calico-config created
+2018-11-04 13:04:11 INFO     service/calico-typha created
+2018-11-04 13:04:11 INFO     deployment.apps/calico-typha created
+2018-11-04 13:04:11 INFO     poddisruptionbudget.policy/calico-typha created
+2018-11-04 13:04:11 INFO     daemonset.extensions/calico-node created
+2018-11-04 13:04:11 INFO     serviceaccount/calico-node created
+2018-11-04 13:04:11 INFO     customresourcedefinition.apiextensions.k8s.io/felixconfigurations.crd.projectcalico.org created
+2018-11-04 13:04:11 INFO     customresourcedefinition.apiextensions.k8s.io/bgppeers.crd.projectcalico.org created
+2018-11-04 13:04:11 INFO     customresourcedefinition.apiextensions.k8s.io/bgpconfigurations.crd.projectcalico.org created
+2018-11-04 13:04:11 INFO     customresourcedefinition.apiextensions.k8s.io/ippools.crd.projectcalico.org created
+2018-11-04 13:04:11 INFO     customresourcedefinition.apiextensions.k8s.io/hostendpoints.crd.projectcalico.org created
+2018-11-04 13:04:11 INFO     customresourcedefinition.apiextensions.k8s.io/clusterinformations.crd.projectcalico.org created
+2018-11-04 13:04:11 INFO     customresourcedefinition.apiextensions.k8s.io/globalnetworkpolicies.crd.projectcalico.org created
+2018-11-04 13:04:11 INFO     customresourcedefinition.apiextensions.k8s.io/globalnetworksets.crd.projectcalico.org created
+2018-11-04 13:04:11 INFO     customresourcedefinition.apiextensions.k8s.io/networkpolicies.crd.projectcalico.org created
+2018-11-04 13:04:11 INFO
+2018-11-04 13:04:11 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:04:11 INFO     +++++++++++++++++++++++++    Node status After Calico addon    +++++++++++++++++++++++++
+2018-11-04 13:04:11 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:04:11 INFO
+2018-11-04 13:04:11 DEBUG    K8 node status after calico addon
+2018-11-04 13:04:11 DEBUG    >>> cmd executed = kubectl get nodes
+2018-11-04 13:04:11 INFO     NAME                STATUS     ROLES    AGE   VERSION
+2018-11-04 13:04:11 INFO     smoothkube-32ae05   NotReady   master   38s   v1.12.2
+2018-11-04 13:04:11 INFO     smoothkube-62f3c3   NotReady   <none>   11s   v1.12.2
+2018-11-04 13:04:11 INFO     smoothkube-b69fff   NotReady   <none>   16s   v1.12.2
+2018-11-04 13:04:11 INFO     smoothkube-df0663   NotReady   <none>   6s    v1.12.2
+2018-11-04 13:04:11 INFO
+2018-11-04 13:04:11 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:04:11 INFO     +++++++++++++++++++++++++    All Pod Status    +++++++++++++++++++++++++
+2018-11-04 13:04:11 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:04:11 INFO
+2018-11-04 13:04:11 DEBUG    POD deployment status
+2018-11-04 13:04:11 DEBUG    >>> cmd executed = kubectl get po --all-namespaces -o wide
+2018-11-04 13:04:12 INFO     NAMESPACE     NAME                       READY   STATUS              RESTARTS   AGE   IP               NODE                NOMINATED NODE
+2018-11-04 13:04:12 INFO     kube-system   calico-node-6qmmx          0/2     ContainerCreating   0          0s    172.26.236.155   smoothkube-62f3c3   <none>
+2018-11-04 13:04:12 INFO     kube-system   calico-node-qhmv5          0/2     ContainerCreating   0          0s    172.26.236.154   smoothkube-b69fff   <none>
+2018-11-04 13:04:12 INFO     kube-system   calico-node-wcwqz          0/2     ContainerCreating   0          0s    172.26.236.156   smoothkube-df0663   <none>
+2018-11-04 13:04:12 INFO     kube-system   calico-node-x66vk          0/2     ContainerCreating   0          0s    172.26.236.153   smoothkube-32ae05   <none>
+2018-11-04 13:04:12 INFO     kube-system   coredns-576cbf47c7-c6wv2   0/1     ContainerCreating   0          21s   <none>           smoothkube-b69fff   <none>
+2018-11-04 13:04:12 INFO     kube-system   coredns-576cbf47c7-g795d   0/1     ContainerCreating   0          21s   <none>           smoothkube-b69fff   <none>
+2018-11-04 13:04:12 INFO     kube-system   kube-proxy-45tbz           1/1     Running             0          11s   172.26.236.155   smoothkube-62f3c3   <none>
+2018-11-04 13:04:12 INFO     kube-system   kube-proxy-hrdk6           1/1     Running             0          16s   172.26.236.154   smoothkube-b69fff   <none>
+2018-11-04 13:04:12 INFO     kube-system   kube-proxy-mphb8           1/1     Running             0          6s    172.26.236.156   smoothkube-df0663   <none>
+2018-11-04 13:04:12 INFO     kube-system   kube-proxy-wf6sh           1/1     Running             0          21s   172.26.236.153   smoothkube-32ae05   <none>
+2018-11-04 13:04:42 INFO
+2018-11-04 13:04:42 INFO     +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:04:42 INFO     +++++++++++++++++++++++++    Setting up Helm    +++++++++++++++++++++++++
+2018-11-04 13:04:42 INFO     +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:04:42 INFO
+2018-11-04 13:04:42 DEBUG    Initializing Tiller
+2018-11-04 13:04:42 DEBUG    >>> cmd executed = helm init
+2018-11-04 13:04:44 INFO     Creating /root/.helm
+2018-11-04 13:04:44 INFO     Creating /root/.helm/repository
+2018-11-04 13:04:44 INFO     Creating /root/.helm/repository/cache
+2018-11-04 13:04:44 INFO     Creating /root/.helm/repository/local
+2018-11-04 13:04:44 INFO     Creating /root/.helm/plugins
+2018-11-04 13:04:44 INFO     Creating /root/.helm/starters
+2018-11-04 13:04:44 INFO     Creating /root/.helm/cache/archive
+2018-11-04 13:04:44 INFO     Creating /root/.helm/repository/repositories.yaml
+2018-11-04 13:04:44 INFO     Adding stable repo with URL: https://kubernetes-charts.storage.googleapis.com
+2018-11-04 13:04:44 INFO     Adding local repo with URL: http://127.0.0.1:8879/charts
+2018-11-04 13:04:44 INFO     $HELM_HOME has been configured at /root/.helm.
+2018-11-04 13:04:44 INFO
+2018-11-04 13:04:44 INFO     Tiller (the Helm server-side component) has been installed into your Kubernetes Cluster.
+2018-11-04 13:04:44 INFO
+2018-11-04 13:04:44 INFO     Please note: by default, Tiller is deployed with an insecure 'allow unauthenticated users' policy.
+2018-11-04 13:04:44 INFO     To prevent this, run `helm init` with the --tiller-tls-verify flag.
+2018-11-04 13:04:44 INFO     For more information on securing your installation see: https://docs.helm.sh/using_helm/#securing-your-helm-installation
+2018-11-04 13:04:44 INFO     Happy Helming!
+2018-11-04 13:04:44 DEBUG    Creating cluster role binding
+2018-11-04 13:04:44 DEBUG    >>> cmd executed = kubectl create clusterrolebinding cluster-rb-deploy --clusterrole=cluster-admin --serviceaccount=kube-system:default
+2018-11-04 13:04:45 INFO     clusterrolebinding.rbac.authorization.k8s.io/cluster-rb-deploy created
+2018-11-04 13:04:55 INFO
+2018-11-04 13:04:55 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:04:55 INFO     +++++++++++++++++++++++++    All Pod Status    +++++++++++++++++++++++++
+2018-11-04 13:04:55 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:04:55 INFO
+2018-11-04 13:04:55 DEBUG    POD deployment status
+2018-11-04 13:04:55 DEBUG    >>> cmd executed = kubectl get po --all-namespaces -o wide
+2018-11-04 13:04:55 INFO     NAMESPACE     NAME                                        READY   STATUS    RESTARTS   AGE   IP               NODE                NOMINATED NODE
+2018-11-04 13:04:55 INFO     kube-system   calico-node-6qmmx                           2/2     Running   0          44s   172.26.236.155   smoothkube-62f3c3   <none>
+2018-11-04 13:04:55 INFO     kube-system   calico-node-qhmv5                           2/2     Running   0          44s   172.26.236.154   smoothkube-b69fff   <none>
+2018-11-04 13:04:55 INFO     kube-system   calico-node-wcwqz                           2/2     Running   0          44s   172.26.236.156   smoothkube-df0663   <none>
+2018-11-04 13:04:55 INFO     kube-system   calico-node-x66vk                           2/2     Running   0          44s   172.26.236.153   smoothkube-32ae05   <none>
+2018-11-04 13:04:55 INFO     kube-system   coredns-576cbf47c7-c6wv2                    1/1     Running   0          65s   192.168.1.2      smoothkube-b69fff   <none>
+2018-11-04 13:04:55 INFO     kube-system   coredns-576cbf47c7-g795d                    1/1     Running   0          65s   192.168.1.3      smoothkube-b69fff   <none>
+2018-11-04 13:04:55 INFO     kube-system   etcd-smoothkube-32ae05                      1/1     Running   0          14s   172.26.236.153   smoothkube-32ae05   <none>
+2018-11-04 13:04:55 INFO     kube-system   kube-apiserver-smoothkube-32ae05            1/1     Running   0          13s   172.26.236.153   smoothkube-32ae05   <none>
+2018-11-04 13:04:55 INFO     kube-system   kube-controller-manager-smoothkube-32ae05   1/1     Running   0          32s   172.26.236.153   smoothkube-32ae05   <none>
+2018-11-04 13:04:55 INFO     kube-system   kube-proxy-45tbz                            1/1     Running   0          55s   172.26.236.155   smoothkube-62f3c3   <none>
+2018-11-04 13:04:55 INFO     kube-system   kube-proxy-hrdk6                            1/1     Running   0          60s   172.26.236.154   smoothkube-b69fff   <none>
+2018-11-04 13:04:55 INFO     kube-system   kube-proxy-mphb8                            1/1     Running   0          50s   172.26.236.156   smoothkube-df0663   <none>
+2018-11-04 13:04:55 INFO     kube-system   kube-proxy-wf6sh                            1/1     Running   0          65s   172.26.236.153   smoothkube-32ae05   <none>
+2018-11-04 13:04:55 INFO     kube-system   kube-scheduler-smoothkube-32ae05            1/1     Running   0          30s   172.26.236.153   smoothkube-32ae05   <none>
+2018-11-04 13:04:55 INFO     kube-system   tiller-deploy-845cffcd48-gdktx              1/1     Running   0          11s   192.168.3.2      smoothkube-62f3c3   <none>
+2018-11-04 13:05:05 INFO
+2018-11-04 13:05:05 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:05:05 INFO     +++++++++++++++++++++++++    Cert manager install    +++++++++++++++++++++++++
+2018-11-04 13:05:05 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:05:05 INFO
+2018-11-04 13:05:05 DEBUG    installing cert manager
+2018-11-04 13:05:05 DEBUG    >>> cmd executed = helm install --name cert-manager stable/cert-manager
+2018-11-04 13:05:08 INFO     NAME:   cert-manager
+2018-11-04 13:05:08 INFO     LAST DEPLOYED: Sun Nov  4 11:05:29 2018
+2018-11-04 13:05:08 INFO     NAMESPACE: default
+2018-11-04 13:05:08 INFO     STATUS: DEPLOYED
+2018-11-04 13:05:08 INFO
+2018-11-04 13:05:08 INFO     RESOURCES:
+2018-11-04 13:05:08 INFO     ==> v1/ServiceAccount
+2018-11-04 13:05:08 INFO     NAME          AGE
+2018-11-04 13:05:08 INFO     cert-manager  0s
+2018-11-04 13:05:08 INFO
+2018-11-04 13:05:08 INFO     ==> v1beta1/ClusterRole
+2018-11-04 13:05:08 INFO     cert-manager  0s
+2018-11-04 13:05:08 INFO
+2018-11-04 13:05:08 INFO     ==> v1beta1/ClusterRoleBinding
+2018-11-04 13:05:08 INFO     cert-manager  0s
+2018-11-04 13:05:08 INFO
+2018-11-04 13:05:08 INFO     ==> v1beta1/Deployment
+2018-11-04 13:05:08 INFO     cert-manager  0s
+2018-11-04 13:05:08 INFO
+2018-11-04 13:05:08 INFO     ==> v1/Pod(related)
+2018-11-04 13:05:08 INFO
+2018-11-04 13:05:08 INFO     NAME                           READY  STATUS             RESTARTS  AGE
+2018-11-04 13:05:08 INFO     cert-manager-76f55c7647-87k4c  0/1    ContainerCreating  0         0s
+2018-11-04 13:05:08 INFO
+2018-11-04 13:05:08 INFO
+2018-11-04 13:05:08 INFO     NOTES:
+2018-11-04 13:05:08 INFO     cert-manager has been deployed successfully!
+2018-11-04 13:05:08 INFO
+2018-11-04 13:05:08 INFO     In order to begin issuing certificates, you will need to set up a ClusterIssuer
+2018-11-04 13:05:08 INFO     or Issuer resource (for example, by creating a 'letsencrypt-staging' issuer).
+2018-11-04 13:05:08 INFO
+2018-11-04 13:05:08 INFO     More information on the different types of issuers and how to configure them
+2018-11-04 13:05:08 INFO     can be found in our documentation:
+2018-11-04 13:05:08 INFO
+2018-11-04 13:05:08 INFO     https://cert-manager.readthedocs.io/en/latest/reference/issuers.html
+2018-11-04 13:05:08 INFO
+2018-11-04 13:05:08 INFO     For information on how to configure cert-manager to automatically provision
+2018-11-04 13:05:08 INFO     Certificates for Ingress resources, take a look at the `ingress-shim`
+2018-11-04 13:05:08 INFO     documentation:
+2018-11-04 13:05:08 INFO
+2018-11-04 13:05:08 INFO     https://cert-manager.readthedocs.io/en/latest/reference/ingress-shim.html
+2018-11-04 13:05:08 INFO
+2018-11-04 13:05:18 INFO
+2018-11-04 13:05:18 INFO     +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:05:18 INFO     +++++++++++++++++++++++++    NfS Provisioner install    +++++++++++++++++++++++++
+2018-11-04 13:05:18 INFO     +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:05:18 INFO
+2018-11-04 13:05:18 DEBUG    Enabling nfs dynamic provisioner
+2018-11-04 13:05:18 DEBUG    >>> cmd executed = helm install --name nfs-7e8720 --set nfs.server=172.26.236.42,nfs.path=/root/PVC,replicaCount=4,storageClass.name=nfs-storage-class-7e8720,storageClass.defaultClass=true,rbac.create=true,storageClass.provisionerName=nfsclientprov/nfs,serviceAccount.create=true,serviceAccount.name=nfs-svc-acc-7e8720 stable/nfs-client-provisioner
+2018-11-04 13:05:20 INFO     NAME:   nfs-7e8720
+2018-11-04 13:05:20 INFO     LAST DEPLOYED: Sun Nov  4 11:05:41 2018
+2018-11-04 13:05:20 INFO     NAMESPACE: default
+2018-11-04 13:05:20 INFO     STATUS: DEPLOYED
+2018-11-04 13:05:20 INFO
+2018-11-04 13:05:20 INFO     RESOURCES:
+2018-11-04 13:05:20 INFO     ==> v1/StorageClass
+2018-11-04 13:05:20 INFO     NAME                      AGE
+2018-11-04 13:05:20 INFO     nfs-storage-class-7e8720  0s
+2018-11-04 13:05:20 INFO
+2018-11-04 13:05:20 INFO     ==> v1/ServiceAccount
+2018-11-04 13:05:20 INFO     nfs-svc-acc-7e8720  0s
+2018-11-04 13:05:20 INFO
+2018-11-04 13:05:20 INFO     ==> v1/ClusterRole
+2018-11-04 13:05:20 INFO     nfs-7e8720-nfs-client-provisioner-runner  0s
+2018-11-04 13:05:20 INFO
+2018-11-04 13:05:20 INFO     ==> v1/ClusterRoleBinding
+2018-11-04 13:05:20 INFO     run-nfs-7e8720-nfs-client-provisioner  0s
+2018-11-04 13:05:20 INFO
+2018-11-04 13:05:20 INFO     ==> v1/Role
+2018-11-04 13:05:20 INFO     leader-locking-nfs-7e8720-nfs-client-provisioner  0s
+2018-11-04 13:05:20 INFO
+2018-11-04 13:05:20 INFO     ==> v1/RoleBinding
+2018-11-04 13:05:20 INFO     leader-locking-nfs-7e8720-nfs-client-provisioner  0s
+2018-11-04 13:05:20 INFO
+2018-11-04 13:05:20 INFO     ==> v1/Deployment
+2018-11-04 13:05:20 INFO     nfs-7e8720-nfs-client-provisioner  0s
+2018-11-04 13:05:20 INFO
+2018-11-04 13:05:20 INFO     ==> v1/Pod(related)
+2018-11-04 13:05:20 INFO
+2018-11-04 13:05:20 INFO     NAME                                                READY  STATUS             RESTARTS  AGE
+2018-11-04 13:05:20 INFO     nfs-7e8720-nfs-client-provisioner-64c744fbf9-8chsg  0/1    ContainerCreating  0         0s
+2018-11-04 13:05:20 INFO     nfs-7e8720-nfs-client-provisioner-64c744fbf9-cgshq  0/1    ContainerCreating  0         0s
+2018-11-04 13:05:20 INFO     nfs-7e8720-nfs-client-provisioner-64c744fbf9-p27hx  0/1    ContainerCreating  0         0s
+2018-11-04 13:05:20 INFO     nfs-7e8720-nfs-client-provisioner-64c744fbf9-qsbt9  0/1    ContainerCreating  0         0s
+2018-11-04 13:05:20 INFO
+2018-11-04 13:05:20 INFO
+2018-11-04 13:05:30 INFO
+2018-11-04 13:05:30 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:05:30 INFO     +++++++++++++++++++++++++    All Pod Status    +++++++++++++++++++++++++
+2018-11-04 13:05:30 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:05:30 INFO
+2018-11-04 13:05:30 DEBUG    POD deployment status
+2018-11-04 13:05:30 DEBUG    >>> cmd executed = kubectl get po --all-namespaces -o wide
+2018-11-04 13:05:30 INFO     NAMESPACE     NAME                                                 READY   STATUS              RESTARTS   AGE    IP               NODE                NOMINATED NODE
+2018-11-04 13:05:30 INFO     default       cert-manager-76f55c7647-87k4c                        0/1     ImagePullBackOff    0          23s    192.168.4.2      smoothkube-df0663   <none>
+2018-11-04 13:05:30 INFO     default       nfs-7e8720-nfs-client-provisioner-64c744fbf9-8chsg   0/1     ContainerCreating   0          11s    <none>           smoothkube-b69fff   <none>
+2018-11-04 13:05:30 INFO     default       nfs-7e8720-nfs-client-provisioner-64c744fbf9-cgshq   0/1     ContainerCreating   0          11s    <none>           smoothkube-df0663   <none>
+2018-11-04 13:05:30 INFO     default       nfs-7e8720-nfs-client-provisioner-64c744fbf9-p27hx   0/1     ContainerCreating   0          11s    <none>           smoothkube-df0663   <none>
+2018-11-04 13:05:30 INFO     default       nfs-7e8720-nfs-client-provisioner-64c744fbf9-qsbt9   0/1     ContainerCreating   0          11s    <none>           smoothkube-62f3c3   <none>
+2018-11-04 13:05:30 INFO     kube-system   calico-node-6qmmx                                    2/2     Running             0          79s    172.26.236.155   smoothkube-62f3c3   <none>
+2018-11-04 13:05:30 INFO     kube-system   calico-node-qhmv5                                    2/2     Running             0          79s    172.26.236.154   smoothkube-b69fff   <none>
+2018-11-04 13:05:30 INFO     kube-system   calico-node-wcwqz                                    2/2     Running             0          79s    172.26.236.156   smoothkube-df0663   <none>
+2018-11-04 13:05:30 INFO     kube-system   calico-node-x66vk                                    2/2     Running             0          79s    172.26.236.153   smoothkube-32ae05   <none>
+2018-11-04 13:05:30 INFO     kube-system   coredns-576cbf47c7-c6wv2                             1/1     Running             0          100s   192.168.1.2      smoothkube-b69fff   <none>
+2018-11-04 13:05:30 INFO     kube-system   coredns-576cbf47c7-g795d                             1/1     Running             0          100s   192.168.1.3      smoothkube-b69fff   <none>
+2018-11-04 13:05:30 INFO     kube-system   etcd-smoothkube-32ae05                               1/1     Running             0          49s    172.26.236.153   smoothkube-32ae05   <none>
+2018-11-04 13:05:30 INFO     kube-system   kube-apiserver-smoothkube-32ae05                     1/1     Running             0          48s    172.26.236.153   smoothkube-32ae05   <none>
+2018-11-04 13:05:30 INFO     kube-system   kube-controller-manager-smoothkube-32ae05            1/1     Running             0          67s    172.26.236.153   smoothkube-32ae05   <none>
+2018-11-04 13:05:30 INFO     kube-system   kube-proxy-45tbz                                     1/1     Running             0          90s    172.26.236.155   smoothkube-62f3c3   <none>
+2018-11-04 13:05:30 INFO     kube-system   kube-proxy-hrdk6                                     1/1     Running             0          95s    172.26.236.154   smoothkube-b69fff   <none>
+2018-11-04 13:05:30 INFO     kube-system   kube-proxy-mphb8                                     1/1     Running             0          85s    172.26.236.156   smoothkube-df0663   <none>
+2018-11-04 13:05:30 INFO     kube-system   kube-proxy-wf6sh                                     1/1     Running             0          100s   172.26.236.153   smoothkube-32ae05   <none>
+2018-11-04 13:05:30 INFO     kube-system   kube-scheduler-smoothkube-32ae05                     1/1     Running             0          65s    172.26.236.153   smoothkube-32ae05   <none>
+2018-11-04 13:05:30 INFO     kube-system   tiller-deploy-845cffcd48-gdktx                       1/1     Running             0          46s    192.168.3.2      smoothkube-62f3c3   <none>
+2018-11-04 13:05:40 INFO
+2018-11-04 13:05:40 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:05:40 INFO     +++++++++++++++++++++++++    Running Task : Task1    +++++++++++++++++++++++++
+2018-11-04 13:05:40 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:05:40 INFO
+2018-11-04 13:05:40 DEBUG    Task1
+2018-11-04 13:05:40 DEBUG    >>> cmd executed = kubectl create sa prod-mgmt-tiller-account
+2018-11-04 13:05:41 INFO     serviceaccount/prod-mgmt-tiller-account created
+2018-11-04 13:05:46 INFO
+2018-11-04 13:05:46 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:05:46 INFO     +++++++++++++++++++++++++    Running Task : Task2    +++++++++++++++++++++++++
+2018-11-04 13:05:46 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:05:46 INFO
+2018-11-04 13:05:46 DEBUG    Task2
+2018-11-04 13:05:46 DEBUG    >>> cmd executed = helm init --service-account  tiller --tiller-namespace default --upgrade
+2018-11-04 13:05:47 INFO     $HELM_HOME has been configured at /root/.helm.
+2018-11-04 13:05:47 INFO
+2018-11-04 13:05:47 INFO     Tiller (the Helm server-side component) has been installed into your Kubernetes Cluster.
+2018-11-04 13:05:47 INFO
+2018-11-04 13:05:47 INFO     Please note: by default, Tiller is deployed with an insecure 'allow unauthenticated users' policy.
+2018-11-04 13:05:47 INFO     To prevent this, run `helm init` with the --tiller-tls-verify flag.
+2018-11-04 13:05:47 INFO     For more information on securing your installation see: https://docs.helm.sh/using_helm/#securing-your-helm-installation
+2018-11-04 13:05:47 INFO     Happy Helming!
+2018-11-04 13:05:52 INFO
+2018-11-04 13:05:52 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:05:52 INFO     +++++++++++++++++++++++++    Running Task : Task3    +++++++++++++++++++++++++
+2018-11-04 13:05:52 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:05:52 INFO
+2018-11-04 13:05:52 DEBUG    Task3
+2018-11-04 13:05:52 DEBUG    >>> cmd executed = helm init --service-account  tiller --tiller-namespace default --upgrade
+2018-11-04 13:05:53 INFO     $HELM_HOME has been configured at /root/.helm.
+2018-11-04 13:05:53 INFO
+2018-11-04 13:05:53 INFO     Tiller (the Helm server-side component) has been upgraded to the current version.
+2018-11-04 13:05:53 INFO     Happy Helming!
+2018-11-04 13:05:58 INFO
+2018-11-04 13:05:58 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:05:58 INFO     +++++++++++++++++++++++++    Running Task : Task4    +++++++++++++++++++++++++
+2018-11-04 13:05:58 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:05:58 INFO
+2018-11-04 13:05:58 DEBUG    Task4
+2018-11-04 13:05:58 DEBUG    >>> cmd executed = kubectl create secret docker-registry suite-image-pull-secret --docker-username=multicloudsuite.gen --docker-password=AKCp5aTvLmuvA2d1eRkiehsSAySuWZiyEv76bczZWzHe7bq5W96drHsmUzKus6v2ZsYXqMFje --docker-email=suite@cisco.com --docker-server=devhub-docker.cisco.com
+2018-11-04 13:05:58 INFO     secret/suite-image-pull-secret created
+2018-11-04 13:06:03 DEBUG    File upload in progress ...
+2018-11-04 13:06:04 DEBUG    Create Tiller rolebind
+2018-11-04 13:06:04 DEBUG    >>> cmd executed = kubectl create -f /tmp/tiller-rb.yaml
+2018-11-04 13:06:05 INFO     clusterrolebinding.rbac.authorization.k8s.io/tiller-cluster-rolebinding created
+2018-11-04 13:06:05 DEBUG    Cleaning up
+2018-11-04 13:06:05 DEBUG    >>> cmd executed = rm -rf /tmp/tiller-rb.yaml
+2018-11-04 13:06:05 INFO
+2018-11-04 13:06:05 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:06:05 INFO     +++++++++++++++++++++++++    Inventory info    +++++++++++++++++++++++++
+2018-11-04 13:06:05 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:06:05 INFO
+2018-11-04 13:06:05 INFO     Master VM Name = 'smoothkube-32ae05' , IP address = '172.26.236.153'
+2018-11-04 13:06:05 INFO     Worker VM Name = 'smoothkube-b69fff' , IP address = '172.26.236.154'
+2018-11-04 13:06:05 INFO     Worker VM Name = 'smoothkube-62f3c3' , IP address = '172.26.236.155'
+2018-11-04 13:06:05 INFO     Worker VM Name = 'smoothkube-df0663' , IP address = '172.26.236.156'
+2018-11-04 13:06:05 DEBUG    File download in progress ...
+2018-11-04 13:06:06 INFO     Kubeconf File :==> ./kubeconf-87f970
+2018-11-04 13:06:06 INFO     Log File :==> /root/kubesmooth/LOGS/deploy-2018-11-04-12-57-45.log
+2018-11-04 13:06:06 INFO
+2018-11-04 13:06:06 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:06:06 INFO     +++++++++++++++++++++++++    Execution time = 0:08:20    +++++++++++++++++++++++++
+2018-11-04 13:06:06 INFO     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-11-04 13:06:06 INFO
+2018-11-04 13:06:08 INFO     0

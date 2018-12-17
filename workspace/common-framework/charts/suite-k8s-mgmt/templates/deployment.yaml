@@ -1,0 +1,37 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: {{ template "k8s-mgmt.fullname" . }}
+  labels:
+    app: {{ template "k8s-mgmt.name" . }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "k8s-mgmt.name" . }}
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ template "k8s-mgmt.name" . }}
+        release: {{ .Release.Name }}
+    spec:
+      serviceAccountName: {{ template "k8s-mgmt.name" . }}
+      imagePullSecrets:
+        - name: {{ .Values.global.imagePullSecret }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.global.registry }}/{{ .Values.global.repository}}/{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: {{ .Values.service.internalPort }}
+          env:
+          - name: IN_CLUSTER
+            value: "{{ .Values.k8smgmt.inCluster}}"
+          - name: STORAGE_TYPE
+            value: {{ .Values.k8smgmt.storageType}}
+          - name: NAMESPACE
+            value: {{required ".Values.global.namespace is required" .Values.global.namespace }}

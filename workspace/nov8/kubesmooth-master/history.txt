@@ -1,0 +1,1000 @@
+   15  ./download_binaries.sh release-4.10.0.1-20181101.0 ./release-4.10.0.1-20181101.0
+   16  ssh
+   17  ssh 192.168.0.34
+   18  ssh 192.168.0.49
+   19  ssh 192.168.0.46
+   20  ssh 192.168.0.49
+   21  ssh 192.168.0.46
+   22  ls -la
+   23  cd ../
+   24  ls -la
+   25  find ./ -name submit
+   26  find ./ -name submit*
+   27  cd ./var/www/html/scripts/api/
+   28  ls -la
+   29  ./submit_job.sh Nov-5reboot-01
+   30  ./submit_job.sh Nov-5reboot-02
+   31  ./submit_job.sh Nov-5reboot-03
+   32  ./submit_job.sh Nov-5reboot-04
+   33  ./submit_job.sh Nov-5reboot-05
+   34  ssh 192.168.0.46
+   35  cd /var/www/html/
+   36  ls -la
+   37  cd scripts/
+   38  ls 
+   39  cat doc-reboot.ps1 
+   40  ls
+   41  cat egor-message.ps1 
+   42  cat ../apps/zfvault.sh 
+   43  cat ../apps/
+   44  ls -la ../apps/
+   45  cat ../apps/random-failure.sh
+   46  ls
+   47  cd ../apps/
+   48  ls -la
+   49  cp random-failure.sh random-message.sh
+   50  vi random-message.sh 
+   51  pwd
+   52  vi random-message.sh 
+   53  cp random-message.sh{,.d}
+   54  vi random-message.sh
+   55  cat random-message.sh
+   56  vi random-message.sh
+   57  cat zfvault.sh 
+   58  vi zfvault.sh 
+   59  vi random-message.sh
+   60  cd /var/www/html/
+   61  ls -la
+   62  cd scripts/
+   63  ls 
+   64  cd api/
+   65  ls -la
+   66  cd ../sc
+   67  cd ..
+   68  ls -la
+   69  cd ...
+   70  cd ..
+   71  ls 
+   72  find ./ -name init*
+   73  cd apps/
+   74  ls -la
+   75  cat /etc/haproxy/haproxy
+   76  cat /etc/haproxy/haproxy.cfg 
+   77  ssh 192.168.0.110
+   78  ssh 192.168.0.23
+   79  ssh 192.168.0.110
+   80  ssh 192.168.0.133
+   81  ssh 192.168.0.28
+   82  ssh 192.168.0.133
+   83  cd /var/www/html/apps/
+   84  cat zfvault.sh 
+   85  vi zfvault.sh 
+   86  ssh 192.168.0.23
+   87  ssh 192.168.0.23 | docker ps -a
+   88  ssh 192.168.0.23 <  docker ps -a
+   89  ssh -t 192.168.0.23 docker ps -a
+   90  ssh -t 192.168.0.110 docker ps -a
+   91  ssh -t 192.168.0.23 docker ps -a
+   92  cat zfvault.sh 
+   93  ssh -t 192.168.0.23 docker ps -a
+   94  ssh -t 192.168.0.110 docker ps -a
+   95  date & ssh -t 192.168.0.110 docker ps -a
+   96  date && ssh -t 192.168.0.110 docker ps -a
+   97  date && ssh -t 192.168.0.110 docker ps -a && ssh -t 192.168.0.23 docker ps -a
+   98  date && ssh -t 192.168.0.110 docker ps -a $2>/dev/null  && ssh -t 192.168.0.23 docker ps -a
+   99  ssh -t 192.168.0.110 docker ps -a
+  100  ssh -q -o "StrictHostKeyChecking no"  -t 192.168.0.110 docker ps -a
+  101  date && ssh -q -o "StrictHostKeyChecking no" -t 192.168.0.110 docker ps -a  && ssh -q -o "StrictHostKeyChecking no"  -t 192.168.0.23 docker ps -a
+  102  ssh  -o "StrictHostKeyChecking no"  -t 192.168.0.110 docker ps -a
+  103  ssh -q   "StrictHostKeyChecking no"  -t 192.168.0.110 docker ps -a
+  104  ssh -q -t 192.168.0.110 docker ps -a
+  105  date && ssh -q -t 192.168.0.110 docker ps -a  && ssh -q -t 192.168.0.23 docker ps -a
+  106  cat zfvault.sh 
+  107  date && ssh -q -t 192.168.0.110 docker ps -a  && ssh -q -t 192.168.0.23 docker ps -a
+  108  vi zfvault.sh 
+  109  date && ssh -q -t 192.168.0.110 docker ps -a  && ssh -q -t 192.168.0.23 docker ps -a
+  110  ssh 192.168.0.28
+  111  ssh 192.168.0.24
+  112  vi zfvault.sh 
+  113  ssh 192.168.0.28
+  114  cd /root/workspace/
+  115  free -m
+  116  free -h
+  117  cd kubesmooth-master
+  118  vi input1.json 
+  119  yum install htop
+  120  top
+  121  ip a
+  122  vi input1.json 
+  123  ssh 192.168.0.56
+  124  vi input1.json 
+  125  ssh 192.168.0.56
+  126  ls
+  127  cd ..
+  128  ls
+  129  cp kubesmooth-master{,.1}
+  130  ls -la
+  131  cp -r kubesmooth-master{,.1}
+  132  ls -la
+  133  unzip kubesmooth-master1.zip 
+  134  ls -la
+  135  cp kubesmooth-master.1/input1.json ./kubesmooth-master/
+  136  cp kubesmooth-master.1/input1.json ./kubesmooth-master
+  137  cd kubesmooth-master
+  138  ls -la
+  139  vi input1.json 
+  140  ssh 192.168.0.62
+  141  ssh 192.168.0.75
+  142  cd /root/workspace/
+  143  ls -la
+  144  cp kubesmooth-master{,.nov5}
+  145  cp -r  kubesmooth-master{,.nov5}
+  146  mkdir mov5
+  147  cp kubesmooth-master-2.zip mov5/
+  148  cd mov5/
+  149  ls
+  150  unzip kubesmooth-master-2.zip 
+  151  cp ../kubesmooth-master/input1.json kubesmooth-master
+  152  cd kubesmooth-master
+  153  ls -la
+  154  vi input1.json 
+  155  ssh 192.168.0.105
+  156  ssh 192.168.0.83
+  157  mv /root/workspace/common-framework-0.0.14384.tgz /var/www/html/
+  158  ip a
+  159  ssh 192.168.0.83
+  160  cd /var/www/html/
+  161  ls -la
+  162  chmod 777 common-framework-0.0.14384.tgz 
+  163  iptables -F
+  164  cd /tmp/
+  165  wget http://localhost/common-framework-0.0.14384.tgz
+  166  cd /var/www/html/
+  167  wget http://repo.ci.ciscolabs.com/CPSG_scarletwitch/charts/postmerge/common-framework-0.0.14384.tgz
+  168  ssh 192.168.0.83
+  169  mkdir workspace
+  170  cd workspace/
+  171  wget https://docs.projectcalico.org/v3.3/getting-started/kubernetes/installation/hosted/kubernetes-datastore/calico-networking/1.7/calico.yaml
+  172  vi calico.yaml 
+  173  ls
+  174  pwd
+  175  cd /root/workspace/
+  176  python deploy.py -i ./input1.json 
+  177  ls
+  178  cd mov5/
+  179  python deploy.py -i ./input1.json 
+  180  ls -la
+  181  cd kubesmooth-master
+  182  python deploy.py -i ./input1.json 
+  183  ls /var/www/html/
+  184  scp /var/www/html/common-framework-0.0.14384.tgz 192.168.0.105:/root/
+  185  yum install cowsay
+  186  cd /tmp/
+  187  wget http://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/c/cowsay-3.04-4.el7.noarch.rpm
+  188  rpm -Unh cowsay-3.04-4.el7.noarch.rpm 
+  189  rpm -Uvh cowsay-3.04-4.el7.noarch.rpm 
+  190  yum install cowsay
+  191  yum install cowsay-3.04-4.el7.noarch.rpm 
+  192  ll
+  193  rpm -Uvh epel-release*rpm
+  194  yum install cowsay -y
+  195  ssh 192.168.0.144
+  196  cd /root/workspace/nov5/
+  197  cd kubesmooth-master
+  198  vi input1.json 
+  199  vi deploy.py 
+  200  cat input1.json 
+  201  yum install git -y
+  202  cd /root/
+  203  ls -la
+  204  mkdir workspace
+  205  cd workspace/
+  206  git clone https://wwwin-github.cisco.com/abmitra/kubesmooth.git
+  207  ls
+  208  git clone git@wwwin-github.cisco.com:abmitra/kubesmooth.git
+  209  git clone https://wwwin-github.cisco.com/abmitra/kubesmooth.git
+  210  git login
+  211  git config --global user.name enaumov
+  212  git clone https://wwwin-github.cisco.com/abmitra/kubesmooth.git
+  213  nc -v wwwin-github.cisco.com 22
+  214  nc -v wwwin-github.cisco.com 443
+  215  ls
+  216  unzip kubesmooth-master.zip 
+  217  ls
+  218  cd kubesmooth-master
+  219  ls -la
+  220  ls
+  221  vi input1.json 
+  222  ls
+  223  cd common/
+  224  ls
+  225  cat remote_ssh.py 
+  226  ls
+  227  cd ../
+  228  ls
+  229  cd constants/
+  230  ls
+  231  cd ../
+  232  vi deploy.py 
+  233  vi input1.json 
+  234  yum install -y pip
+  235  pip
+  236  pip install paramiko pyvmomi
+  237  pip install --upgrade pip
+  238  dir
+  239  ls -a
+  240  ls -la
+  241  ping 10.193.72.19
+  242  ping 173.36.216.162
+  243  ping 192.168.0.28
+  244  cat input1.json 
+  245  vi input1.json 
+  246  head input1.json 
+  247  curl -k -X POST -H "Accept: application/json" -H "Content-Type: application/json" -u admin@osmosix.com,1:osmosix "https://192.168.0.46/v1/crypto/decrypt" -d '{"data":"10fdbwaLt43SwUCGsic0Jg==", "keyName": "local"}'
+  248  python deploy.py -i ./input1.json
+  249  ps aux | grep py
+  250  kill -9 18046
+  251  python deploy.py -i ./input1.json
+  252  vi deploy.py 
+  253  python deploy.py -i ./input1.json
+  254  vi input1.json 
+  255  python deploy.py -i ./input1.json
+  256  ssh 192.168.0.83
+  257  cd ../
+  258  vi kubesmooth-master
+  259  cd kubesmooth-master
+  260  vi input1.json 
+  261  ip a
+  262  kubectl get pvc
+  263  ls
+  264  grep -ir calico.yaml
+  265  vi deploy.py 
+  266  wget http://192.168.0.24/workspace/calico.yaml 
+  267  vi deploy.py 
+  268  python deploy.py -i ./input1.json
+  269  ls
+  270  pwd
+  271  cd ../mov5/kubesmooth-master
+  272  cd common/
+  273  ls
+  274  vi utils.py
+  275  cd ../
+  276  vi input1.json 
+  277  python deploy.py -i ./input1.json
+  278  ll /tmp/
+  279  cat /tmp/calico.yaml 
+  280  vi /tmp/calico_original.yaml 
+  281  ps aux | ft
+  282  grep -ir sftp 
+  283  vi common/utils.py
+  284  python deploy.py -i ./input1.json
+  285  vi common/utils.py
+  286  python deploy.py -i ./input1.json
+  287  cd ../
+  288  ls -la
+  289  cd ..
+  290  ls -la
+  291  mkdir nov5
+  292  cp kubesmooth-master-3.zip ./nov5/
+  293  ls -la
+  294  cd nov5/
+  295  ls -la
+  296  unzip kubesmooth-master-3.zip 
+  297  ls -la
+  298  cp ../mov5/kubesmooth-master/input1.json ./
+  299  ls -la
+  300  cp input1.json kubesmooth-master
+  301  cd kubesmooth-master
+  302  vi input1.json 
+  303  python deploy.py -i ./input1.json   > /tmp/1.log &
+  304  tail -f /tmp/1.log 
+  305  python deploy.py -i ./input1.json   > /tmp/2.log &
+  306  cd /root/workspace/nov5/
+  307  ls
+  308  cd kubesmooth-master
+  309  cat input1.json 
+  310  tail -f /tmp/nov6.log 
+  311  ls -la
+  312  cd /root/
+  313  ls -la
+  314  cd workspace/
+  315  ls -la
+  316  rm -rf kubesmooth-master*
+  317  rm -rf mov5/
+  318  rm -rf nov5/
+  319  ;s =;a
+  320  ls -la
+  321  ls nov6/
+  322  tar -xvf common-framework-0.0.14391.tgz 
+  323  ls -la
+  324  cd common-framework
+  325  ls -la
+  326  ls
+  327  cd ..
+  328  ls
+  329  scp common-framework-0.0.14391.tgz 192.168.0.63:/root/
+  330  cd
+  331  cd /root/workspace/nov6/kubesmooth-master/input1.json 
+  332  vi /root/workspace/nov6/kubesmooth-master/input1.json 
+  333  cd  /root/workspace/nov6/kubesmooth-master/
+  334  python deploy.py -i ./input1.json   
+  335  ls
+  336  cd ../
+  337  ls -la
+  338  cd ..
+  339  ls -la
+  340  scp common-framework-0.0.14391.tgz 192.168.0.147:/root/
+  341  cd /root/
+  342  ls -la
+  343  ssh 192.168.0.147
+  344  exit
+  345  cd /root/workspace/
+  346  ls -la
+  347  mkdir nov6
+  348  mv kubesmooth-master-nov6.zip ./nov6/
+  349  cd nov
+  350  cd nov6/
+  351  ls
+  352  unzip kubesmooth-master-nov6.zip 
+  353  ls
+  354  cd kubesmooth-master
+  355  vi input1.json 
+  356  python deploy.py -i ./input1.json   > /tmp/nov6.log &
+  357  ssh 192.168.0.63
+  358  ssh 192.168.0.147
+  359  exit
+  360  cat /etc/haproxy/haproxy
+  361  cat /etc/haproxy/haproxy.cfg 
+  362  exit
+  363  cd /var/www/html/apps/
+  364  cat zfvault.sh 
+  365  ssh 10.193.79.46
+  366  ssh 192.168.0.110
+  367  $repo
+  368  cat apps/custom-ccc/ccc-configure.sh 
+  369  ssh 192.168.0.110
+  370  cat /var/www/html/apps/zfvault.sh 
+  371   az vm image list --publisher MicrosoftWindowsServer -o table --all | grep -i 2012-Datacenter
+  372  ssh 192.168.0.23
+  373  ssh 192.168.0.110
+  374  exit
+  375  exit
+  376  cd /root/workspace/
+  377  ls -la
+  378  mkdir nov8
+  379  cd nov8/
+  380  ip a
+  381  cat ../nov6/kubesmooth-master/input1.json 
+  382  cd /var/www/html/
+  383  ls
+  384  ip a
+  385  mv -r /tmp/ova/ ./
+  386  mv  /tmp/ova ./
+  387  ls -la
+  388  cd ova/
+  389  ls -la
+  390  ip a
+  391  ls
+  392  ls -la
+  393  chmod 777 *
+  394  cd ..
+  395  chmod 777 -r ova/
+  396  chmod 777 -R ova/
+  397  ls -la ova/
+  398  ls -la
+  399  chmod 755 -R ./ova/
+  400  ls -la
+  401  ls ova/
+  402  ls -la
+  403  systemctl restart haproxy
+  404  cp -r ova apps/
+  405  cd /root/workspace/nov8/
+  406  ls
+  407  unzip kubesmooth-master.zip 
+  408  cd kubesmooth-master
+  409  ls -la
+  410  cat ../../nov6/kubesmooth-master/input1.json 
+  411  vi input1.json 
+  412  python deploy.py -i ./input1.json   
+  413  vi input1.json 
+  414  python deploy.py -i ./input1.json   
+  415  vi input1.json 
+  416  python deploy.py -i ./input1.json   
+  417  ls /var/www/html/apps/
+  418  help ls
+  419  ssh 192.168.0.86
+  420  ls
+  421  cd ../../nov6/
+  422  ls
+  423  cd /root/workspace/
+  424  ls
+  425  cd common-framework
+  426  ls
+  427  cd ../
+  428  scp common-framework-0.0.14391.tgz 192.160.1.139:/tmp/
+  429  scp common-framework-0.0.14391.tgz 192.168.0.86:/tmp/
+  430  ssh 192.168.0.86
+  431  cd nov8/kubesmooth-master
+  432  lw
+  433  c
+  434  ls
+  435  export KUBECONFIG=/root/deploy/20181108135540/kubeconf-cisco-ac2bbc 
+  436  export TILLER_NAMESPACE=cisco
+  437  helm
+  438  ssh 192.168.0.86
+  439  ssh 192.168.0.46
+  440  ssh 192.168.0.49
+  441  cd /tmp/
+  442  ls
+  443  ssh 192.168.0.46
+  444  cd ~/workspace/
+  445  ls -la
+  446  cd nov8/
+  447  ls -la
+  448  cd kubesmooth-master
+  449  ls -la
+  450  cat calico.yaml 
+  451  cat calico.yaml | grep 0.0
+  452  ls -la
+  453  vi deploy.py 
+  454  cd ~/repo/
+  455  ls
+  456  ls -la
+  457  rm -rf *4.10.0.0.1*
+  458  mkdir  release-4.10.0.1-20181113.0
+  459  ./download_binaries.sh release-4.10.0.1-20181113.0 ./release-4.10.0.1-20181113.0 &
+  460  ls -la
+  461  ssh 10.193.78.54
+  462  ssh 192.168.0.96
+  463  ssh 192.168.0.86
+  464  ssh 173.36.216.162
+  465  ssh 192.168.0.49 
+  466  ssh 192.168.0.31
+  467  ssh 192.168.0.39
+  468  ssh 192.168.0.38
+  469  ssh 192.168.0.31
+  470  ssh 192.168.0.133
+  471  cd ~/workspace/nov8/kubesmooth-master
+  472  ls -la
+  473  vi input1.json 
+  474  python deploy.py -i ./input1.json   
+  475  ls -la ~/.ssh/
+  476  ssh-copy-id 192.168.0.48
+  477  ssh-copy-id 192.168.0.50
+  478  ssh-copy-id 192.168.0.53
+  479  ssh-copy-id 192.168.0.54
+  480  ssh 192.168.0.48
+  481  cat /tmp/calico.yaml 
+  482  cat /tmp/calico.yaml  | grep 10.
+  483  ip a
+  484  cd /tmp/m
+  485  cd /tmp/
+  486  ls
+  487  mkdir nov14
+  488  cd nov14/
+  489  wget http://repo.ci.ciscolabs.com/CPSG_scarletwitch/charts/postmerge/common-framework-0.0.14462.tgz
+  490  ls
+  491  scp common-framework-0.0.14462.tgz 192.168.0.69:/tmp/
+  492  ssh 192.168.0.86
+  493  exit
+  494  exit
+  495  cd /root/
+  496  ls
+  497  cd repo/
+  498  ls
+  499  cd scripts/
+  500  ls
+  501  cd api/
+  502  ls
+  503  cd ../api/
+  504  cd ~/re
+  505  cd ~/repo/apps/
+  506  ls
+  507  ./initial_contract_run.sh 192.168.0.47
+  508  ssh 192.168.0.86
+  509  ssh-copy-id 192.168.0.86
+  510  ssh 192.168.0.86
+  511  clear
+  512  cd ~/workspace/nov8/
+  513  cd kubesmooth-master
+  514  vi input1.json 
+  515  python deploy.py -i ./input1.json   
+  516  ssh-copy-id 192.168.0.69
+  517  ssh 192.168.0.69
+  518  ssh 192.168.0.67
+  519  ssh 192.168.0.76
+  520  ssh 192.168.0.69
+  521  cd ~/repo/
+  522  cd scripts/
+  523  ls
+  524  cd ../apps/
+  525  ls
+  526  cat random-failure.sh
+  527  pwd
+  528  ip a
+  529  ls
+  530  cat random-failure.sh
+  531  1 + RANDOM % 100
+  532  var=$((1 + RANDOM % 100))
+  533  echo $var
+  534  var=$((1 + RANDOM % 100)) && echo $var
+  535  vi random-failure.sh
+  536  ssh 192.168.0.69
+  537  exit
+  538  ssh 192.168.0.97
+  539  cd ~/repo
+  540  ls
+  541  cd apps/
+  542  ls
+  543  vi random-failure.sh
+  544  ssh 192.168.0.69
+  545  curl -k -X POST -H "Accept: application/json" -H "Content-Type: application/json" -u admin@osmosix.com,1:osmosix "https://192.168.0.47/v1/crypto/decrypt" -d '{"data":"YRif67p1GuHJjj/GN3Ly5oKsr9QM12Ld0m/2sH0I08c=", "keyName": "local"}'
+  546  ip a
+  547  ssh 192.168.0.69
+  548  ssh 192.168.0.69
+  549  cd /tmp/
+  550  ls
+  551  mkdir /var/www/html/mayo
+  552  cp Mayo* /var/www/html/mayo/
+  553  ls /var/www/html/mayo
+  554  ssh 192.168.0.58
+  555  ls
+  556  ssh 192.168.0.59
+  557  cd /var/www/html/
+  558  cd mayo/
+  559  ls 
+  560  unzip Mayotest.zip 
+  561  ls
+  562  mkdir Mayotest
+  563  cp extinit.sh Mayotest
+  564  ls Mayo
+  565  ls Mayotest
+  566  ls
+  567  rm -rf Mayotest.zip 
+  568  ls
+  569  zip Mayotest.zip ./Mayotest/
+  570  ls
+  571  cp Mayotest.zip /var/tmp/
+  572  cd /var/tmp/
+  573  ls
+  574  unzip Mayotest.zip 
+  575  ls
+  576  ls Mayotest/
+  577  ls Mayotest
+  578  ls
+  579  cd -
+  580  cls
+  581  ls
+  582  ls Mayo
+  583  ls Mayotest
+  584  ls
+  585  rm -rf Mayotest.zip 
+  586  zip -r Mayotest/
+  587  zip -r Mayotest
+  588  zip -r Mayotest.zip ./Mayotest
+  589  cp Mayotest.zip ~/
+  590  cd ~/
+  591  ip a
+  592  ls
+  593  zip Mayotest.zip 
+  594  ls
+  595  unzip Mayotest.zip 
+  596  ls
+  597  ls Mayotest
+  598  cd -
+  599  pwd
+  600  ls
+  601  ssh 192.168.0.59
+  602  ls
+  603  mkdir cloudregion
+  604  cp extinit.sh cloudregion/
+  605  cat  cloudregion/extinit.sh 
+  606  zip -r test.zip cloudregion
+  607  ssh 192.168.0.59
+  608  cd ~/repo/mayo/
+  609  ls
+  610  exit
+  611  ssh 192.168.0.108
+  612  ssh 10.193.79.57
+  613  exit
+  614  cd ~/repo/apps/
+  615  ls
+  616  vi random-failure.sh
+  617  cd ~/repo/
+  618  s
+  619  ls -la
+  620  mkdir release-4.9.0-20180409.2
+  621  ./download_binaries.sh release-4.9.0-20180409.2. ./release-4.9.0-20180409.2
+  622  ./download_binaries.sh release-4.9.0-20180409.2 ./release-4.9.0-20180409.2
+  623  exit
+  624  ip a
+  625  ls
+  626  ls -la release-4.9.0-20180409.2
+  627  vi apps/custom-ccc/public_ccc-install.sh 
+  628  scp /tmp/pg_dump_cliqrdb_2018-12-03.zip 192.168.0.117:/tmp
+  629  cd /root/
+  630  pg_dump -U cliqr -d cliqrdb > cliqrdb490.sql
+  631  ls -la
+  632  cd ~/repo/
+  633  ls -la
+  634  mkdir release-4.9.0.1-20180529.1
+  635  ./download_binaries.sh release-4.9.0.1-20180529.1 ./release-4.9.0.1-20180529.1
+  636  ls
+  637  ls -la
+  638  mkdir release-4.10.0.2-20181205.0
+  639  ./download_binaries.sh release-4.10.0.2-20181205.0 ./release-4.10.0.2-20181205.0 &
+  640  ssh 192.168.0.115
+  641  ls -la
+  642  ssh 192.168.0.125
+  643  ls
+  644  cd scripts/api/
+  645  ls
+  646  cd ../../apps/
+  647  ls
+  648  ls -la
+  649  cat initial_contract_run.sh 
+  650  ls
+  651  ls custom-ccc/
+  652  ls ova/
+  653  ls -la
+  654  cd ..
+  655  ls -la
+  656  cd scripts/
+  657  ls -la
+  658  cd api/
+  659  ls
+  660  cat submit_job.sh 
+  661  cd ../api/
+  662  cd ../../apps/
+  663  ls
+  664  ./initial_contract_run.sh 192.168.0.125
+  665  ip a
+  666  exit
+  667  ls -la
+  668  ls -lrta
+  669  ls -la
+  670  rm -rf release-4.10.0.1-20181101.0 release-4.10.0.1-20181031.1
+  671  ls -la 
+  672  chmod 755 release-4.7.1.3-20170417.1
+  673  ls -la
+  674  nc -v 13.64.100.181 22
+  675  nc -v 13.64.100.181 3389
+  676  curl -k -X POST -H "Accept: application/json" -H "Content-Type: application/json" -u admin@osmosix.com,1:osmosix "https://192.168.0.115/v1/crypto/decrypt" -d '{"data":"VjnuVXMGJiFVLXomYkqKC7P53S0URwaHZRYkD/xjBfCO/gZ+qaONOuYfY2sndMeKEF54U7x+uT8qgQAaI5T7bNFgXrTqPJ3R8eIV8T7Kjis=", "keyName": "local"}'
+  677  curl -k -X POST -H "Accept: application/json" -H "Content-Type: application/json" -u admin@osmosix.com,1:osmosix "https://192.168.0.115/v1/crypto/decrypt" -d '{"data":"gcaytcF13RpKZISyLu00RezaDnVtBu4OEsY9/vsZTTN/co+iQW1eHT1WlqHdFeoj", "keyName": "local"}'
+  678  nc -v 13.64.100.181 22
+  679  nc -v 13.64.100.181 3389
+  680  vi /tmp/1.pem
+  681  chmod 400 /tmp/1.pem 
+  682  ssh -i /tmp/1.pem 40.78.14.131 
+  683  ssh -i /tmp/1.pem cliqruser@40.78.14.131 
+  684  ls -la
+  685  ip a
+  686   az vm image list --publisher MicrosoftWindowsServer -o table --all | grep -i 2012-Datacenter
+  687  az vm image list --publisher OpenLogic -o table --all | grep -i centos
+  688  ping 104.42.61.120
+  689  ssh 192.168.0.114
+  690  ls
+  691  cd apps/
+  692  ls -la
+  693  cat random-message.sh
+  694  ls
+  695  ls -la
+  696  cat random-failure.sh
+  697  vi random-failure.sh
+  698  ls
+  699  ls -la ../scripts/
+  700  ls
+  701  cd ../
+  702  ls ./scripts/doc-reboot.ps1 
+  703  ssh 192.168.0.114
+  704  ssh 192.168.0.115
+  705  ssh 192.168.0.141
+  706  cat test.sh 
+  707  ls
+  708  cat apps/random-message.sh
+  709  ls scripts/
+  710  ip a
+  711  cd scripts/
+  712  ls -la
+  713  vi doc-reboot.sh
+  714  ls -la
+  715  cats doc-reboot.sh 
+  716  ssh -i  40.112.181.184
+  717  vi doc-reboot.sh 
+  718  ssh -i  ~/az.
+  719  vi doc-reboot.sh 
+  720  cats doc-reboot.sh 
+  721  mkdir release-4.10.0.2-20181206.0
+  722  ./download_binaries.sh release-4.10.0.2-20181206.0 ./release-4.10.0.2-20181206.0
+  723  cd apps/custom-ccc/
+  724  ls
+  725  cat Z.sh 
+  726  vi Z.sh 
+  727  pwd
+  728  ls
+  729  cp Z.sh ZpostStart.sh
+  730  cp Z.sh ZpreStart.sh
+  731  cp Z.sh ZpreStop.sh
+  732  cp Z.sh ZpostStop.sh
+  733  vi ZpostStart.sh 
+  734  vi ZpreStart.sh 
+  735  vi ZpreStop.sh 
+  736  vi ZpostStop.sh 
+  737  ls -la
+  738  cat ZpostStop.sh 
+  739  vi ZpostStop.sh 
+  740  ls ../../
+  741  ip a
+  742  ls
+  743  cd /tmp/
+  744  ls
+  745  tar -zxvf ipam-amitra-workingOnsus.tar.gz 
+  746  cd callout/ipam
+  747  ls
+  748  cat ipam.py 
+  749  cat  ipam.py  | grep -i host
+  750  cat  ipam.py  | grep -i name
+  751  cat  ../vmnaming/vmnaming.py  | grep -i name
+  752  ssh 192.168.0.115
+  753  ssh 192.168.0.114
+  754  ls
+  755  ls -la
+  756  mkdir release-4.10.0.2-20181209.0
+  757  ./download_binaries.sh release-4.10.0.2-20181209.0 ./release-4.10.0.2-20181209.0
+  758  cd apps/
+  759  ls
+  760  cd ../scripts/
+  761  ls
+  762  cd api/
+  763  ls
+  764  vi delete_submit.sh
+  765  cats delete_submit.sh 
+  766  for((i=73;i<=89;i+=2)); do curl -k -X DELETE -H "X-CLIQR-API-KEY-AUTH:true" -H "Content-Type:application/json" -u admin@cliqrtech.com,1:cliqr https://192.168.0.115/v2/jobs/$i?hide=true; done
+  767  for((i=93;i<=95;i+=2)); do curl -k -X DELETE -H "X-CLIQR-API-KEY-AUTH:true" -H "Content-Type:application/json" -u admin@cliqrtech.com,1:cliqr https://192.168.0.115/v2/jobs/$i?hide=true; done
+  768  cd /tmp/
+  769  curl -k -X GET -H "Accept: application/json" -u admin@cliqrtech.com,1:cliqr "https://192.168.0.115/v1/aclResources"
+  770  curl -k -X GET -H "Accept: application/json" -u admin@cliqrtech.com,1:cliqr "https://192.168.0.115/v1/aclResources" | python -m tool.json
+  771  curl -k -X GET -H "Accept: application/json" -u admin@cliqrtech.com,1:cliqr "https://192.168.0.115/v1/aclResources" | python -m json.tool
+  772  curl -k -X GET -H "Accept: application/json" -u test@cliqr.com,1:cliqr "https://192.168.0.115/v1/aclResources" | python -m json.tool
+  773  curl -k -X GET -H "Accept: application/json" -u test@cliqr.com,1:cliqr "python -m json.tool " | python -m json.tool
+  774  curl -k -X GET -H "Accept: application/json" -u test@cliqr.com,1:cliqr "https://192.168.0.115/v1/acls/?id=33&resourceName=APPLICATION" | python -m json.tool
+  775  curl -k -X GET -H "Accept: application/json" -u test@cliqr.com,1:cliqr "https://192.168.0.88/v1/acls/?id=33&resourceName=APPLICATION" | python -m json.tool
+  776  curl -k -X GET -H "Accept: application/json" -u test@cliqr.com,1:cliqr "https://192.168.0.115/v1/acls/?id=33&resourceName=APPLICATION" | python -m json.tool
+  777  cd scripts/api/
+  778  ls
+  779  cat delete_submit.sh 
+  780  curl -k -X GET -H "Accept: application/json" -u test@cliqr.com,1:cliqr "https://192.168.0.115/v1/acls/?id=33&resourceName=APPLICATION" | python -m json.tool
+  781  curl -k -X GET -H "Accept: application/json" -u test@cliqr.com,1:cliqr "https://192.168.0.115/v1/acls/?id=1&resourceName=DEPLOYMENT_ENVIRONMENT" | python -m json.tool
+  782  curl -k -X GET -H "Accept: application/json" -u test@cliqr.com,1:cliqr "https://192.168.0.115/v1/acls/?id=2&resourceName=DEPLOYMENT_ENVIRONMENT" | python -m json.tool
+  783  curl -k -X GET -H "Accept: application/json" -u admin@cliqrtech.com,1:cliqr "https://192.168.0.115/v1/acls/?id=2&resourceName=DEPLOYMENT_ENVIRONMENT" | python -m json.tool
+  784  curl -k -X GET -H "Accept: application/json" -u admin@cliqrtech.com,1:cliqr "https://192.168.0.115/v1/acls/?id=1&resourceName=DEPLOYMENT_ENVIRONMENT" | python -m json.tool
+  785  curl -k -X GET -H "Accept: application/json" -u admin@cliqrtech.com,1:cliqr "https://192.168.0.115/v1/acls/" | python -m json.tool
+  786  curl -k -X GET -H "Accept: application/json" -u admin@cliqrtech.com,1:cliqr "https://192.168.0.115/v1/acls" | python -m json.tool
+  787  curl -k -X GET -H "Accept: application/json" -u admin@cliqrtech.com,1:cliqr "https://192.168.0.115/v1/aclResources" | python -m json.tool
+  788  curl -k -X GET -H "Accept: application/json" -u admin@cliqrtech.com,1:cliqr "https://192.168.0.115/v1/aclResources" | python -m json.tool | grep -i cisco
+  789  curl -k -X GET -H "Accept: application/json" -u admin@cliqrtech.com,1:cliqr "https://192.168.0.115/v1/aclResources" | python -m json.tool 
+  790  curl -k -X GET -H "Accept: application/json" -u admin@cliqrtech.com,1:cliqr "https://192.168.0.115/v1/aclResources" | python -m json.tool  | grep test
+  791  curl -k -X GET -H "Accept: application/json" -u admin@cliqrtech.com,1:cliqr "https://192.168.0.115/v1/aclResources" | python -m json.tool  
+  792  curl -k -X GET -H "Accept: application/json" -u admin@cliqrtech.com,1:cliqr "https://192.168.0.115/v1/acls/resourceName=DEPLOYMENT_ENVIRONMENT" | python -m json.tool  
+  793  curl -k -X GET -H "Accept: application/json" -u admin@cliqrtech.com,1:cliqr "https://192.168.0.115/v1/acls/id=1&resourceName=DEPLOYMENT_ENVIRONMENT" | python -m json.tool  
+  794  curl -k -X GET -H "Accept: application/json" -u admin@cliqrtech.com,1:cliqr "https://192.168.0.115/v1/acls/?resourceName=DEPLOYMENT_ENVIRONMENT" | python -m json.tool  
+  795  curl -k -X GET -H "Accept: application/json" -u admin@cliqrtech.com,1:cliqr "https://192.168.0.115/v1/acls/?id=1&resourceName=DEPLOYMENT_ENVIRONMENT" | python -m json.tool  
+  796  ls ../../
+  797  exit
+  798  ls -la
+  799  ls mayo/
+  800  cd mayo/
+  801  ls
+  802  cat Mayoextinit.sh 
+  803  Mayotest/extinit.sh 
+  804  cat Mayotest/extinit.sh 
+  805  unzip test.zip 
+  806  ls
+  807  az vm image list --publisher OpenLogic -o table --all | grep -i centos
+  808  ssh 192.168.0.114
+  809  ssh 192.168.0.147
+  810  rm -rf ~/.ssh/known_hosts 
+  811  ssh 192.168.0.147
+  812  ssh 10.36.226.222
+  813  exit
+  814  ls
+  815  mkdir release-4.10.0.2-20181210.1.1 ./release-4.10.0.2-20181210.1.1
+  816  mkdir release-4.10.0.2-20181210.1.1 
+  817  ./download_binaries.sh release-4.10.0.2-20181210.1.1 ./release-4.10.0.2-20181210.1.1
+  818  mkdir CORE-20955
+  819  rm -rf CORE-20955/
+  820  mkdir release-4.10.0.2-20181211.0
+  821  ./download_binaries.sh release-4.10.0.2-20181211.0 ./release-4.10.0.2-20181211.0
+  822  ls
+  823  ssh 192.168.0.115
+  824  ls
+  825  ls -la | grpe release-4.10.0.2-20181211.0
+  826  ls -la | grep release-4.10.0.2-20181211.0
+  827  ls release-4.10.0.2-20181211.0
+  828  ssh 192.168.0.115
+  829  cd scripts/
+  830  ls
+  831  cd ../mayo/
+  832  ls
+  833  cp test.zip /tmp/
+  834  ls
+  835  cd /tmp/
+  836  ls
+  837  unzip test.zip 
+  838  ls
+  839  cd cloudregion/
+  840  ls -la
+  841  cd ~/repo/mayo/
+  842  ls
+  843  zip -r mayotest.zip  ./cloudregion
+  844  ls -la
+  845  ls cloudregion/
+  846  ды 
+  847  ls
+  848  ssh 192.168.0.88
+  849  ssh 192.168.0.114
+  850  ls -la
+  851  mkdir release-4.9.0-20180409.2
+  852  ssh 192.168.0.63
+  853  scp /etc/haproxy/haproxy.cfg 192.168.0.159:/etc/haproxy/
+  854  ls
+  855  ssh 192.168.0.115
+  856  ssh 192.168.0.63
+  857  ip a
+  858  df -h
+  859  yum install -y git
+  860  git --version
+  861  ssh 192.168.0.67
+  862  mkdir github
+  863  cd github/
+  864  mkdir mdavis
+  865  cd mdavis/
+  866  git init
+  867  ls -la
+  868  git branch
+  869  git status
+  870  git add .
+  871  git status 
+  872  git branch
+  873  git clone https://github.com/cliqr2015/egcsco.git --branch mdavis
+  874  ls
+  875  cd egcsco/
+  876  ls
+  877  cd mdavis/
+  878  ls
+  879  pwd
+  880  cd ..'
+  881  cd
+  882  ls 
+  883  cd ..
+  884  ls -la
+  885  cd ..
+  886  ls
+  887  ls -la
+  888  git branch
+  889  cd egcsco/
+  890  git branch
+  891  ls
+  892  ls -la
+  893  ssh 192.168.0.144
+  894  cd /tmp/
+  895  ls
+  896  rm -rf *
+  897  wget https://egsus.cisco.com/ova/pilot_1.0.0-20181216.0.ovf
+  898  wget http://egsus.cisco.com/ova/pilot_1.0.0-20181216.0.mf
+  899  ip a
+  900  ls -la
+  901  exit
+  902  cd ~/
+  903  cd ~/repo/
+  904  ls -la
+  905  find ./ -name *smooth*
+  906  find ./ -name *deploy*
+  907  find ./ -name *json*
+  908  ls -la
+  909  exit
+  910  ssh 192.168.0.46
+  911  cd/ tm
+  912  cd /tmp
+  913  ls
+  914  rm -rf *
+  915  ls -la
+  916  wget pilot_1.0.0-20181216.0.ova
+  917  wget http://engci-maven.cisco.com/artifactory/cloudcenter-generic/pilot/packages/ova/pilot_1.0.0-20181216.0.ova
+  918  cd ~/repo/scripts/
+  919  ls
+  920  ls 
+  921  cd ../apps/
+  922  ls
+  923  cd request-json/
+  924  ls
+  925  cd ..
+  926  ls -la
+  927  cd request_body
+  928  ls
+  929  cat create_cloud_account_dmz.json 
+  930  cat create_cloud_account_vmware.json
+  931  cd ../
+  932  ls
+  933  grep -ir egor
+  934  cqt request_body/create_cloud_account_dmz2.json
+  935  cut request_body/create_cloud_account_dmz2.json
+  936  cut ./request_body/create_cloud_account_dmz2.json
+  937  cat ./request_body/create_cloud_account_dmz2.json 
+  938  ls -la
+  939  cd ova/
+  940  ls
+  941  ls -la
+  942  cd /tmp/
+  943  ls
+  944  mv pilot_1.0.0-20181216.0.ova ~/repo/apps/ova/
+  945  cd ~/repo/apps/ova/
+  946  ls -la
+  947  chmod 755 pilot_1.0.0-20181216.0.ova 
+  948  pwd
+  949  ip a
+  950  cd /tmp/
+  951  ls
+  952  wget http://173.36.216.180/apps/ova/pilot_1.0.0-20181216.0.ova
+  953  ip a
+  954  ls ~/repo/
+  955  ls ~/repo/apps/ova/pilot_1.0.0-20181216.0.ova 
+  956  wget http://173.36.216.180/apps/ova/pilot_1.0.0-20181216.0.ova
+  957  wget http://192.168.0.24/apps/ova/pilot_1.0.0-20181216.0.ova
+  958  cd ~/repo/apps/ova/
+  959  ls -la
+  960  chmod 777 pilot_1.0.0-20181216.0.ova 
+  961  systemctl restart haproxy
+  962  ls -la
+  963  systemctl restart haproxy
+  964  ls -la
+  965  chmod 755 *
+  966  ls -la
+  967  \
+  968  ip a
+  969  ls
+  970  cd /tmp/
+  971  ls
+  972  wget 
+  973  wget http://173.36.216.180/apps/ova/pilot_1.0.0-20181216.0.ova
+  974  wget http://localhost/apps/ova/pilot_1.0.0-20181216.0.ova
+  975  wget http://egsus.cisco.comm/pilot_1.0.0-20181216.0.ova
+  976  wget http://egsus.cisco.com/pilot_1.0.0-20181216.0.ova
+  977  ls 
+  978  ls -la
+  979  ls
+  980  cp ~/repo/apps/ova/pilot_1.0.0-20181216.0.ova  ./
+  981  ls
+  982  tar -xvf pilot_1.0.0-20181216.0.ova 
+  983  ls
+  984  ls -la
+  985  cd /tmp/
+  986  ls
+  987  wget http://egdmz.cisco.com/ova/pilot_1.0.0-20181216.0.mf
+  988  cd ~/repo/
+  989  ls
+  990  ls -lrta
+  991  ls workspace/
+  992  find ./ -name kubesmooth
+  993  find ./ -name kubesmooth*
+  994  find ./ -name *kubesmooth*
+  995  cd ~/repo/
+  996  find ./ -name *smooth*
+  997  exit
+  998  cd /root/
+  999  ls
+ 1000  cd deploy/
+ 1001  ls -la
+ 1002  cd ./
+ 1003  cd .//
+ 1004  cd /root/
+ 1005  ls -la
+ 1006  ls workspace/
+ 1007  cd workspace/nov8/
+ 1008  ls -la
+ 1009  cd kubesmooth-master
+ 1010  ls -la
+ 1011  cat input1.json 
+ 1012  history | grep deploy
+ 1013  ls -la
+ 1014  history  > history.txt

@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "suite-mng.name" . }}
+  labels:
+    app: {{ template "suite-mng.name" . }}
+    chart: {{ template "suite-mng.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "suite-mng.name" . }}
+    release: {{ .Release.Name }}

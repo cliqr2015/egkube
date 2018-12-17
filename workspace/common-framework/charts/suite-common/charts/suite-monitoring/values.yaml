@@ -1,0 +1,112 @@
+prometheus:
+  rbac:
+    create: true
+  server:
+    service:
+      #type: NodePort
+      type: ClusterIP
+    jobs:
+      kubernetesPods:
+        enabled: true
+      kubernetesNodes:
+        enabled: true
+      kubernetesApiservers:
+        enabled: false
+      kubernetesNodesCadvisor:
+        enabled: true
+      kubernetesServiceEndpoints:
+        enabled: false
+
+
+  serviceAccounts:
+    alertmanager:
+      create: false
+      #name: tiller
+    kubeStateMetrics:
+      create: false
+      name: 
+    nodeExporter:
+      create: false
+      name: 
+    pushgateway:
+      create: false
+      #name: tiller
+    server:
+      create: false
+      name: 
+
+  alertmanager:
+    enabled: false
+  kubeStateMetrics:
+    enabled: true
+  #    cronjobs daemonsets deployments endpoints horizontalpodautoscaler
+  #    jobs limitranges namespaces persistentvolumeclaims persistentvolumes
+  #    replicasets replicationcontrollers resourcequotas services statefulsets
+
+  nodeExporter:
+    enabled: true
+  pushgateway:
+    enabled: false
+
+grafana:
+  service:
+    # type: NodePort
+    type: ClusterIP
+  grafana.ini:
+    paths:
+      data: /var/lib/grafana/data
+      logs: /var/log/grafana
+      plugins: /var/lib/grafana/plugins
+      provisioning: /etc/grafana/provisioning
+    analytics:
+      check_for_updates: true
+    log:
+      mode: console
+    server:
+      root_url: "http://suite-grafana:80/suite-grafana/"
+    auth.basic:
+      enabled: false
+    auth.anonymous:
+      enabled: true
+      org_name: Main Org.
+      org_role: Admin
+    grafana_net:
+      url: https://grafana.net
+  rbac:
+    create: false
+    pspEnabled: false
+  serviceAccount:
+    create: false
+  adminUser: admin
+  adminPassword: password
+  datasources:
+    datasources.yaml:
+      apiVersion: 1
+      datasources:
+      - name: Prometheus
+        type: prometheus
+        url: http://suite-monitoring-prometheus-server
+        access: proxy
+        isDefault: true
+  dashboardProviders:
+    dashboardproviders.yaml:
+      apiVersion: 1
+      providers:
+      - name: 'default'
+        orgId: 1
+        folder: ''
+        type: file
+        disableDeletion: false
+        editable: true
+        options:
+          path: /var/lib/grafana/dashboards/default
+  dashboardsConfigMaps:
+    default: "suite-monitoring-dashboard"
+  sidecar:
+    dashboards:
+      enabled: false
+      # label that the configmaps with dashboards are marked with
+      label: grafana_dashboard
+      # folder in the pod that should hold the collected dashboards
+      folder: /tmp/dashboards
+

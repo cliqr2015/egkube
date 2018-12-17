@@ -1,0 +1,29 @@
+{{- if .Values.ingress.enabled -}}
+{{- $fullName := include "suite-gateway.fullname" . -}}
+{{- $Name := include "suite-gateway.name" . -}}
+{{- $servicePort := .Values.service.httpPort -}}
+{{- $ingressPath := .Values.ingress.path -}}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ $fullName }}
+  labels:
+    app: {{ template "suite-gateway.name" . }}
+    chart: {{ template "suite-gateway.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+{{- with .Values.ingress.annotations }}
+  annotations:
+{{ toYaml . | indent 4 }}
+{{- end }}
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /
+        backend:
+          serviceName: suite-gateway
+          servicePort: 10080
+  tls:
+  - secretName: suite-gateway-external-tls-secrets
+{{- end }}

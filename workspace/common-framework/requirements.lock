@@ -1,0 +1,18 @@
+dependencies:
+- name: suite-prod-mgmt
+  repository: https://repo.ci.ciscolabs.com/CPSG_wakanda/charts/postmerge
+  version: v0.1.573
+- name: suite-svc-register
+  repository: https://repo.ci.ciscolabs.com/CPSG_wakanda/charts/postmerge
+  version: v0.1.573
+- name: suite-common
+  repository: https://repo.ci.ciscolabs.com/CPSG_quicksilver/charts/postmerge
+  version: 0.1.953
+- name: ui
+  repository: https://repo.ci.ciscolabs.com/CPSG_suiteadmin/charts/postmerge
+  version: v0.1.1139
+- name: suite-k8s-mgmt
+  repository: https://repo.ci.ciscolabs.com/CPSG_wakanda/charts/postmerge
+  version: v0.1.573
+digest: sha256:f0d80650ac1bbac740fb9915a3a8f270899144e99782087cfd6b1ae55a518215
+generated: 2018-11-06T13:05:48.713212962Z

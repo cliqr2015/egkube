@@ -1,0 +1,44 @@
+{
+  "vcenter-server":"173.36.216.162",
+  "vcenter-user":"administrator@vsphere.local",
+  "vcenter-password":"Sfish123!",
+  "ssh_creds": {
+              "username": "root",
+              "authentication_type": "pw",
+              "password": "sfish@123",
+              "privatekey": "/root/openstack.pem"
+  },
+  "pod_cidr": "10.10.0.0/16",
+  "vm_name_prefix":"smoothkube",
+  "numberOfVMs" : 4,
+  "vm_template_details": {
+    "template_name":"KubernetesBase",
+    "datastoreName" : "DS1",
+    "vcpu" : 2,
+    "ramGb" : 15360,
+    "resourcePool": "Egor"
+  },
+  "customization_flag": "False",
+  "customization_data": {
+    "ipList" : ["30.30.30.153","30.30.30.154","30.30.30.155","30.30.30.156"],
+    "subnetMaskList" : ["255.255.255.0","255.255.255.0","255.255.255.0","255.255.255.0"],
+    "gatewayList" : ["30.30.30.1","30.30.30.1","30.30.30.1","30.30.30.1"],
+    "dnsList" : ["8.8.8.8","8.8.8.8","8.8.8.8","8.8.8.8"],
+    "networkList" : ["DHCP-Internal","DHCP-Internal","DHCP-Internal","DHCP-Internal"],
+    "domainName": "cloudlab.com"
+  },
+  "nfs_server":"30.30.30.42",
+  "nfs_path":"/root/PVC",
+  "deploy_nfs": "True",
+  "nfs_details": {
+    "customization_flag": "False",
+    "ipList" : ["30.30.30.157"],
+    "subnetMaskList" : ["255.255.255.0"],
+    "gatewayList" : ["30.30.30.1"],
+    "dnsList" : ["8.8.8.8"],
+    "networkList" : ["DHCP-Internal"],
+    "domainName": "cloudlab.com",
+    "nfs_subnet":"192.168.0.0/16"
+  }
+
+}

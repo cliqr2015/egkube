@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "suite-auth.name" . }}
+  labels:
+    app: {{ template "suite-auth.name" . }}
+    chart: {{ template "suite-auth.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  clusterIP: None
+  ports:
+    - port: {{ .Values.service.httpPort }}
+      targetPort: http
+      name: http
+    - port: {{ .Values.service.httpsPort }}
+      targetPort: https
+      name: https
+  selector:
+    app: {{ template "suite-auth.name" . }}
+    release: {{ .Release.Name }}

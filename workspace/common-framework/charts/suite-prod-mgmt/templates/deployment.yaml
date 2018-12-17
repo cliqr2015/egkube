@@ -1,0 +1,43 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: {{ template "prod-mgmt.fullname" . }}
+  labels:
+    app: {{ template "prod-mgmt.name" . }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "prod-mgmt.name" . }}
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ template "prod-mgmt.name" . }}
+        release: {{ .Release.Name }}
+    spec:
+      serviceAccountName: {{ template "prod-mgmt.name" . }}
+      imagePullSecrets:
+        - name: {{ .Values.global.imagePullSecret }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.global.registry }}/{{ .Values.global.repository}}/{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: {{ .Values.service.internalPort }}
+          env:
+          - name: CLOUD_TYPE
+            value: {{ .Values.global.cloudType }}
+          - name: SERVICE_TYPE
+            value: {{ .Values.global.serviceType }}
+          - name: NAMESPACE
+            value: {{required ".Values.global.namespace is required" .Values.global.namespace }}
+          - name: IN_CLUSTER
+            value: "{{ .Values.prodmgmt.inCluster}}"
+          - name: STORAGE_TYPE
+            value: {{ .Values.prodmgmt.storageType}}
+          - name: K8S_MGMT_HOST
+            value: {{ .Values.prodmgmt.k8smgmtHost}}

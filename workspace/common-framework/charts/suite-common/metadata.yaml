@@ -1,0 +1,71 @@
+---
+productId: 'common-framework'
+version: 0.0.13168
+name: MultiCloudSuite
+homePath: /ui
+requiredRoles: [ 'SUITE_ADMIN', 'SUITE_TENANT_ADMIN', 'SUITE_USER_ADMIN' ]
+prefix: SUITE
+roleMetadataUrl: http://suite-prodregistry:8080/suite-roles/roles
+description: ''
+groups:
+- id: tenant-admin
+  name: Tenant Administrators
+  roles: [ 'SUITE_USER', 'SUITE_TENANT_ADMIN', 'SUITE_USER_ADMIN' ]
+services:
+- serviceName: suite-idm
+  name: SUITE-IDM
+  endpoint:
+    protocol: http
+    port: '8080'
+- serviceName: suite-auth
+  name: SUITE-AUTH
+  endpoint:
+    protocol: http
+    port: '8080'
+- serviceName: suite-password
+  name: SUITE-PASSWORD
+  endpoint:
+    protocol: http
+    port: '8080'
+- serviceName: suite-prodregistry
+  name: SUITE-PRODUCT-REGISTRY
+  endpoint:
+    protocol: http
+    port: '8080'
+- serviceName: suite-prod-mgmt
+  name: SUITE-PROD-MGMT
+  endpoint:
+    protocol: http
+    port: '8080'
+- serviceName: ui
+  name: Suite UI
+  type: UI
+  endpoint:
+    protocol: http
+    port: '8080'
+- serviceName: suite-email
+  name: SUITE-EMAIL
+  endpoint:
+    protocol: http
+    port: '8080'
+- serviceName: suite-monitor
+  name: SUITE-MONITOR
+  endpoint:
+    protocol: http
+    port: '8080'
+- serviceName: suite-res-mgmt
+  name: SUITE-RES-MGMT
+  endpoint:
+    protocol: http
+    port: '8080'
+- serviceName: suite-logs
+  name: SUITE-LOGS
+  endpoint:
+    protocol: http
+    port: '8080'
+- serviceName: suite-kibana
+  name: SUITE-KIBANA
+  endpoint:
+    publicApiPrefix: devnullapi
+    protocol: http
+    port: '80'

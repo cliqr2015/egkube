@@ -1,0 +1,4 @@
+common/*.pyc
+tasks/*.pyc
+constants/*.pyc
+LOGS

@@ -1,0 +1,96 @@
+apiVersion: apps/v1beta2
+kind: StatefulSet
+metadata:
+  name: {{ template "suite-nats.fullname" . }}
+  labels:
+    app: {{ template "suite-nats.name" . }}
+    chart: {{ template "suite-nats.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+    component: suite-nats
+spec:
+  # serviceName: suite-nats
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "suite-nats.name" . }}
+      release: {{ .Release.Name }}
+      component: suite-nats
+  template:
+    metadata:
+      labels:
+        app: {{ template "suite-nats.name" . }}
+        release: {{ .Release.Name }}
+        component: suite-nats
+    spec:
+      imagePullSecrets:
+        - name: {{ .Values.global.imagePullSecret }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+          args: [ "--config", "/etc/nats/config/nats.conf"]
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          volumeMounts:
+            - name: nats-config-volume
+              mountPath: /etc/nats/config
+            - name: suite-nats-tls
+              mountPath: /secrets/ssl/cert
+              readOnly: true
+            - name: ca-key-pair
+              mountPath: /secrets/ssl/ca
+              readOnly: true
+          ports:
+          - containerPort: 4222
+            name: client
+          - containerPort: 6222
+            name: cluster
+          - containerPort: 8222
+            name: monitor
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8222
+            initialDelaySeconds: 10
+            timeoutSeconds: 5
+          # readinessProbe:
+          #   httpGet:
+          #     path: /
+          #     port: http
+          resources:
+{{ toYaml .Values.resources | indent 12 }}
+    {{- with .Values.nodeSelector }}
+      nodeSelector:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+                - key: component
+                  operator: In
+                  values:
+                    - nats
+            topologyKey: kubernetes.io/hostname
+    {{- with .Values.tolerations }}
+      tolerations:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+      volumes:
+      - name: suite-nats-tls
+        secret:
+          secretName: suite-nats-tls
+          items:
+          - key: tls.crt
+            path: certificate.pem
+          - key: tls.key
+            path: private_key.pem
+      - name: ca-key-pair
+        secret:
+          secretName: ca-key-pair
+          items:
+          - key: tls.crt
+            path: ca_certificate.pem
+      - name: nats-config-volume
+        configMap:
+          name: suite-nats-config

@@ -1,0 +1,46 @@
+{
+  "vcenter-server":"173.36.216.162",
+  "vcenter-user":"administrator@vsphere.local",
+  "vcenter-password":"Sfish123!",
+  "ssh_creds": {
+              "username": "root",
+              "authentication_type": "pw",
+              "password": "sfish@123",
+              "privatekey": "/root/openstack.pem"
+  },
+  "kube-user":"cisco",
+  "pod_cidr": "10.10.0.0/16",
+  "vm_name_prefix":"deploy",
+  "numberOfVMs" : 4,
+  "vm_template_details": {
+    "template_name":"K8-Base1",
+    "datastoreName" : "DS1",
+    "vcpu" : 10,
+    "ramGb" : 16384,
+    "resourcePool": "Egor"
+  },
+  "customization_flag": "False",
+  "customization_data": {
+    "ipList" : ["1.1.1.153","1.1.1.154","1.1.1.155","1.1.1.156"],
+    "subnetMaskList" : ["255.255.255.0","255.255.255.0","255.255.255.0","255.255.255.0"],
+    "gatewayList" : ["1.1.1.1","1.1.1.1","1.1.1.1","1.1.1.1"],
+    "dnsList" : ["171.70.168.183","171.70.168.183","171.70.168.183","171.70.168.183"],
+    "networkList" : ["DHCP-Internal","DHCP-Internal","DHCP-Internal","DHCP-Internal"],
+    "domainName": "cloudlab.com"
+  },
+  "nfs_server":"1.1.1.42",
+  "nfs_path":"/root/PVC",
+  "deploy_nfs": "true",
+  "nfs_details": {
+    "customization_flag": "False",
+    "ipList" : ["1.1.1.160"],
+    "subnetMaskList" : ["255.255.255.0"],
+    "gatewayList" : ["1.1.1.1"],
+    "dnsList" : ["171.70.168.183"],
+    "networkList" : ["DHCP-Internal"],
+    "domainName": "cloudlab.com",
+    "nfs_subnet":"192.168.0.0/24"
+  },
+  "resultDir":"/root/deploy"
+
+}

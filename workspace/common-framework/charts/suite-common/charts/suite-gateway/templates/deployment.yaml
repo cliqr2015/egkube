@@ -1,0 +1,111 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: {{ template "suite-gateway.fullname" . }}
+  labels:
+    app: {{ template "suite-gateway.name" . }}
+    chart: {{ template "suite-gateway.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "suite-gateway.name" . }}
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ template "suite-gateway.name" . }}
+        release: {{ .Release.Name }}
+    spec:
+      initContainers:
+        # Gateway is dependant on prodregistry
+        - name: init-suite-jwt-keys
+          image: "busybox"
+          command: ['sh', '-c', 'until [ "$(wget -qO - suite-jwt-keys:8080/health)" = "{\"status\":\"UP\"}" ]; do echo waiting for myservice; sleep 2; done;']
+        - name: init-prodregistry
+          image: "busybox"
+          command: ['sh', '-c', 'until [ "$(wget -qO - suite-prodregistry:8080/health)" = "{\"status\":\"UP\"}" ]; do echo waiting for myservice; sleep 2; done;']
+        - name: pem-jks-converter
+{{ include "pem-jks-converter" . | indent 10 }}
+          volumeMounts:
+          - name: suite-gateway-tls
+            mountPath: /cert
+            readOnly: true
+          - name: ca-key-pair
+            mountPath: /ca
+            readOnly: True
+          - name: suite-gateway-jks
+            mountPath: /jks-secrets
+      imagePullSecrets:
+        - name: {{ .Values.global.imagePullSecret }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: {{ .Values.global.registry }}/{{ .Values.global.repository}}/{{ .Values.image.repository }}:{{ .Values.image.tag }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 10080
+              protocol: TCP
+            - name: https-external
+              containerPort: 9443
+              protocol: TCP
+            - name: https-internal
+              containerPort: 8443
+              protocol: TCP
+          env:
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: suite-random-password
+                  key: password
+          volumeMounts:
+          - name: suite-gateway-tls
+            mountPath: {{ .Values.internalTls.mountPath }}/cert
+            readOnly: true
+          - name: ca-key-pair
+            mountPath: {{ .Values.internalTls.mountPath }}/ca
+            readOnly: true
+          - name: suite-gateway-jks
+            mountPath: /tmp/secrets
+            readOnly: true
+#          livenessProbe:
+#            httpGet:
+#              path: /
+#              port: http
+#          readinessProbe:
+#            httpGet:
+#              path: /
+#              port: http
+          resources:
+{{ toYaml .Values.resources | indent 12 }}
+    {{- with .Values.nodeSelector }}
+      nodeSelector:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+      volumes:
+      - name: suite-gateway-tls
+        secret:
+          secretName: suite-gateway-tls
+          items:
+            - key: tls.crt
+              path: certificate.pem
+            - key: tls.key
+              path: private_key.pem
+      - name: ca-key-pair
+        secret:
+          secretName: ca-key-pair
+          items:
+          - key: tls.crt
+            path: ca_certificate.pem
+      - name: suite-gateway-jks
+        emptyDir: {}

@@ -1,0 +1,130 @@
+dependencies:
+- name: suite-auth
+  version: ">=0.0.0-0"
+  repository: "alias:quicksilver"
+  condition: suite-auth.enabled
+
+- name: suite-demo-hello
+  version: ">=0.0.0-0"
+  repository: "alias:quicksilver"
+  condition: suite-demo-hello.enabled
+
+- name: suite-demo-ui
+  version: ">=0.0.0-0"
+  repository: "alias:quicksilver"
+  condition: suite-demo-ui.enabled
+
+#- name: suite-demo-nats-client
+#  version: ">=0.0.0-0"
+#  repository: "alias:quicksilver"
+#  condition: suite-demo-nats-client.enabled
+
+- name: suite-gateway
+  version: ">=0.0.0-0"
+  repository: "alias:quicksilver"
+  condition: suite-gateway.enabled
+
+- name: suite-idm
+  version: ">=0.0.0-0"
+  repository: "alias:quicksilver"
+  condition: suite-idm.enabled
+
+- name: suite-jwt-keys
+  version: ">=0.0.0-0"
+  repository: "alias:quicksilver"
+  condition: suite-jwt-keys.enabled
+
+- name: suite-password
+  version: ">=0.0.0-0"
+  repository: "alias:quicksilver"
+  condition: suite-password.enabled
+
+- name: suite-prodregistry
+  version: ">=0.0.0-0"
+  repository: "alias:quicksilver"
+  condition: suite-prodregistry.enabled
+
+# - name: suite-kafka
+#   version: ">=0.0.0-0"
+#   repository: "file://../suite-kafka"
+#   condition: suite-kafka.enabled
+#
+# - name: suite-zookeeper
+#   version: ">=0.0.0-0"
+#   repository: "file://../suite-zookeeper"
+#   condition: suite-zookeeper.enabled
+
+# - name: postgresql
+#   version: ">0.1.0"
+#   repository: https://kubernetes-charts.storage.googleapis.com/
+#   condition: postgresql.enabled
+
+- name: mongodb
+  version: ">0.1.0"
+  repository: https://kubernetes-charts.storage.googleapis.com/
+  condition: mongodb.enabled
+
+- name: suite-nats
+  version: ">=0.0.0-0"
+  repository: "file://../suite-nats"
+  condition: suite-nats.enabled
+
+- name: suite-postgresql
+  version: ">=0.0.0-0"
+  repository: "alias:quicksilver"
+  condition: suite-postgresql.enabled
+
+#- name: cert-manager
+#  version: ">=0.0.0-0"
+#  repository: https://kubernetes-charts.storage.googleapis.com/
+
+- name: suite-license
+  version: ">=0.0.0-0"
+  repository: "alias:quicksilver"
+  condition: suite-license.enabled
+
+- name: suite-email
+  version: ">=0.0.0-0"
+  repository: "alias:quicksilver"
+  condition: suite-email.enabled
+
+- name: suite-cryptoservice
+  version: ">=0.0.0-0"
+  repository: "alias:quicksilver"
+  condition: suite-cryptoservice.enabled
+
+- name: suite-monitor
+  version: ">=0.0.0-0"
+  repository: "alias:quicksilver"
+  condition: suite-monitor.enabled
+
+- name: suite-monitoring
+  version: ">=0.0.0-0"
+  repository: "alias:quicksilver"
+  condition: suite-monitoring.enabled
+
+- name: suite-res-mgmt
+  version: ">=0.0.0-0"
+  repository: "alias:quicksilver"
+  condition: suite-res-mgmt.enabled
+
+- name: suite-logs
+  version: ">=0.0.0-0"
+  repository: "alias:quicksilver"
+  condition: suite-logs.enabled
+
+- name: nginx-ingress
+  version: ">=0.0.0-0"
+  repository: https://kubernetes-charts.storage.googleapis.com/
+
+- name: suite-logging
+  version: ">=0.0.0-0"
+  repository: "alias:quicksilver"
+  condition: suite-logging.enabled
+  
+- name: suite-mng
+  version: ">=0.0.0-0"
+  repository: "alias:quicksilver"
+  condition: suite-mng.enabled
+
+

@@ -1,0 +1,65 @@
+# Default values for suite-gateway.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: quicksilver/suite-gateway
+  tag: latest
+  pullPolicy: IfNotPresent
+
+# Headless ClusterIP service to provide internal dns name suite-gateway
+service:
+  enabled: true
+  httpPort: 10080
+  httpsPort: 8443
+
+# NodePort service to expose httpPort to localhost:30000 on host machine
+service2:
+  enabled: false
+  httpPort: 10080
+
+
+internalTls:
+  mountPath: "/secrets/ssl"
+  enabled: false
+
+ingress:
+  enabled: enabled
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/proxy-body-size: 5m
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "300"
+    # kubernetes.io/tls-acme: "true"
+  path: /
+  hosts:
+    - foo.bar.com
+  tls:
+    - secretName: "suite-gateway-external-tls-secrets"
+      hosts:
+        - foo.bar.com
+  certificate:
+    fromFiles:
+      create: true
+    selfSigned:
+      create: false
+      cn: foo.bar.com
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #  cpu: 100m
+  #  memory: 128Mi
+  # requests:
+  #  cpu: 100m
+  #  memory: 128Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

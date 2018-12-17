@@ -1,0 +1,7 @@
+annotations:
+  productName: Suite Admin
+apiVersion: v1
+appVersion: "1.0"
+description: Common framework multicloud suite
+name: common-framework
+version: 0.0.14391

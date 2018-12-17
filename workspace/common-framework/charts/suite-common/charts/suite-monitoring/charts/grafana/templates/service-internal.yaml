@@ -1,0 +1,51 @@
+{{- if .Values.global.suiteMonitoring }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: suite-grafana
+  labels:
+    app: {{ template "grafana.name" . }}
+    chart: {{ template "grafana.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+{{- if .Values.serviceInternal.labels }}
+{{ toYaml .Values.serviceInternal.labels | indent 4 }}
+{{- end }}
+{{- with .Values.serviceInternal.annotations }}
+  annotations:
+{{ toYaml . | indent 4 }}
+{{- end }}
+spec:
+{{- if (or (eq .Values.serviceInternal.type "ClusterIP") (empty .Values.serviceInternal.type)) }}
+  type: ClusterIP
+  {{- if .Values.serviceInternal.clusterIP }}
+  clusterIP: {{ .Values.serviceInternal.clusterIP }}
+  {{end}}
+{{- else if eq .Values.serviceInternal.type "LoadBalancer" }}
+  type: {{ .Values.serviceInternal.type }}
+  {{- if .Values.serviceInternal.loadBalancerIP }}
+  loadBalancerIP: {{ .Values.serviceInternal.loadBalancerIP }}
+  {{- end }}
+  {{- if .Values.serviceInternal.loadBalancerSourceRanges }}
+  loadBalancerSourceRanges:
+{{ toYaml .Values.serviceInternal.loadBalancerSourceRanges | indent 4 }}
+  {{- end -}}
+{{- else }}
+  type: {{ .Values.serviceInternal.type }}
+{{- end }}
+{{- if .Values.serviceInternal.externalIPs }}
+  externalIPs:
+{{ toYaml .Values.serviceInternal.externalIPs | indent 4 }}
+{{- end }}
+  ports:
+    - name: service
+      port: {{ .Values.service.port }}
+      protocol: TCP
+      targetPort: 3000
+{{ if (and (eq .Values.service.type "NodePort") (not (empty .Values.service.nodePort))) }}
+      nodePort: {{.Values.service.nodePort}}
+{{ end }}
+  selector:
+    app: {{ template "grafana.name" . }}
+    release: {{ .Release.Name }}
+{{- end }}

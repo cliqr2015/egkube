@@ -1,0 +1,97 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: {{ template "suite-demo-ui.fullname" . }}
+  labels:
+    app: {{ template "suite-demo-ui.name" . }}
+    chart: {{ template "suite-demo-ui.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "suite-demo-ui.name" . }}
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ template "suite-demo-ui.name" . }}
+        release: {{ .Release.Name }}
+    spec:
+      initContainers:
+        # Password is dependant on gateway
+        - name: init-suite-gateway
+          image: "busybox"
+          command: ['sh', '-c', 'until wget -qO - suite-gateway:10080/health | grep -q "\"status\":\"UP\""; do echo waiting for gateway; sleep 2; done;']
+        - name: pem-jks-converter
+{{ include "pem-jks-converter" . | indent 10 }}
+          volumeMounts:
+          - name: suite-demo-ui-tls
+            mountPath: /cert
+            readOnly: true
+          - name: ca-key-pair
+            mountPath: /ca
+            readOnly: True
+          - name: suite-demo-ui-jks
+            mountPath: /jks-secrets
+        - name: pg-init-client
+{{ include "pg-init-client" . | indent 10 }}
+      imagePullSecrets:
+        - name: {{ .Values.global.imagePullSecret }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: {{ .Values.global.registry }}/{{ .Values.global.repository}}/{{ .Values.image.repository }}:{{ .Values.image.tag }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 8080
+#          livenessProbe:
+#            httpGet:
+#              path: /
+#              port: http
+#          readinessProbe:
+#            httpGet:
+#              path: /
+#              port: http
+          volumeMounts:
+          - name: suite-demo-ui-tls
+            mountPath: {{ .Values.internalTls.mountPath }}/cert
+            readOnly: true
+          - name: ca-key-pair
+            mountPath: {{ .Values.internalTls.mountPath }}/ca
+            readOnly: true
+          - name: suite-demo-ui-jks
+            mountPath: /tmp/secrets
+            readOnly: true
+          resources:
+{{ toYaml .Values.resources | indent 12 }}
+    {{- with .Values.nodeSelector }}
+      nodeSelector:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+      volumes:
+      - name: suite-demo-ui-tls
+        secret:
+          secretName: suite-demo-ui-tls
+          items:
+            - key: tls.crt
+              path: certificate.pem
+            - key: tls.key
+              path: private_key.pem
+      - name: ca-key-pair
+        secret:
+          secretName: ca-key-pair
+          items:
+          - key: tls.crt
+            path: ca_certificate.pem
+      - name: suite-demo-ui-jks
+        emptyDir: {}

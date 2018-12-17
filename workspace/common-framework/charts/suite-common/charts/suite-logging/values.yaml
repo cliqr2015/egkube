@@ -1,0 +1,18 @@
+elasticsearch:
+  master:
+    replicas: 2
+  data:
+    replicas: 1
+  client:
+    replicas: 1
+
+  kibana:
+    enabled: true
+    replicas: 1
+    # serviceType: NodePort
+    serviceType: ClusterIP
+
+
+fluentd-elasticsearch:
+  rbac:
+    create: false

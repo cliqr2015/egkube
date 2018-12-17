@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "suite-email.name" . }}
+  labels:
+    app: {{ template "suite-email.name" . }}
+    chart: {{ template "suite-email.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  clusterIP: None
+  ports:
+    - port: {{ .Values.service.httpPort }}
+      targetPort: http
+      name: http
+    - port: {{ .Values.service.httpsPort }}
+      targetPort: https
+      name: https
+    - port: {{ .Values.service.debugPort }}
+      targetPort: https
+      name: debug
+  selector:
+    app: {{ template "suite-email.name" . }}
+    release: {{ .Release.Name }}
