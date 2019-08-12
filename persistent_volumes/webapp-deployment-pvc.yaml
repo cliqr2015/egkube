@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: webapp-deployment-pvc
+  name: webapp-deployment-pvc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: webapp-deployment-pvc
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: webapp-deployment-pvc
+    spec:
+      containers:
+      - name: event-simulator
+        image: kodekloud/event-simulator
+        env:
+        - name: LOG_HANDLERS
+          value: file
+        volumeMounts:
+        - mountPath: /log
+          name: log-volume
+
+      volumes:
+      - name: log-volume
+        persistentVolumeClaim:
+          claimName: claim-log-1
+
+status: {}

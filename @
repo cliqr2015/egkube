@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+    namespace: default
+    name: lb-app-myhero
+spec:
+    type: NodePort
+    ports:
+      - targetPort: 80
+        port: 5000
+        nodePort: lb-153-05cbb0  30737/TCP
+    selector:
+      Name=my-hero0611
+      app=my-hero0611-148-app-153
+      cliqr=4f9f1560282937569
+      pod-template-hash=5f98d74b4
+      tier=app

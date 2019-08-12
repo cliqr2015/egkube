@@ -1,0 +1,73 @@
+# pv-wordpress:
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: wordpress-persistent-storage
+spec:
+  capacity:
+    storage: 1Gi
+#  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Recycle
+  nfs:
+    path: /html
+    server: nfs01
+
+---
+# pvc-wordpress:
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: wordpress-persistent-storage
+spec:
+  accessModes:
+    - ReadWriteMany
+#  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 1Gi
+
+---
+# pv-mysql:
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mysql-persistent-storage
+spec:
+  capacity:
+    storage: 1Gi
+#  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Recycle
+  nfs:
+    path: /mysql
+    server: nfs01
+
+---
+# pvc-mysql:
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysql-persistent-storage
+spec:
+  accessModes:
+    - ReadWriteMany
+#  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 1Gi
+
+---
+# secret-mysql:
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysql-pass
+type: Opaque
+data:
+#  username: YWRtaW4=
+# echo -n 'admin' | base64 
+  password: YWRtaW4=
+

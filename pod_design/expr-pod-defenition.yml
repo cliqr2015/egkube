@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: ubuntu
+  name: ubuntu
+spec:
+  containers:
+  - image: ubuntu
+    name: ubuntu-expr
+    resources: {}
+#    command: ["/bin/bash"]
+#    args: ["-c", "echo Hello World and: $HOSTNAME && cat /etc/hostname"]
+    command: ["expr","5","+","2"]
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}

@@ -1,0 +1,64 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "1"
+  creationTimestamp: 2019-06-19T22:44:46Z
+  generation: 1
+  name: webapp-food
+  namespace: app-space
+  resourceVersion: "4018"
+  selfLink: /apis/extensions/v1beta1/namespaces/app-space/deployments/webapp-food
+  uid: d68ad137-92e3-11e9-a3e0-0242ac11001a
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: webapp-food
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: webapp-food
+    spec:
+      containers:
+      - image: kodekloud/ecommerce:food
+        imagePullPolicy: Always
+        name: webapp-food
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: 2019-06-19T22:44:50Z
+    lastUpdateTime: 2019-06-19T22:44:50Z
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  - lastTransitionTime: 2019-06-19T22:44:46Z
+    lastUpdateTime: 2019-06-19T22:44:50Z
+    message: ReplicaSet "webapp-food-74f748fb94" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  observedGeneration: 1
+  readyReplicas: 1
+  replicas: 1
+  updatedReplicas: 1

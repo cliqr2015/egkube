@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: d1
+  name: d1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: d1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: d1
+    
+    spec:
+      containers:
+      - name: event-simulator
+        image: kodekloud/event-simulator
+        env:
+        - name: LOG_HANDLERS
+          value: file
+        volumeMounts:
+        - mountPath: /log
+          name: log-volume
+
+      volumes:
+      - name: log-volume
+        hostPath:
+          # directory location on host
+          path: /var/log/webapp
+          # this field is optional
+          type: Directory
+
+status: {}

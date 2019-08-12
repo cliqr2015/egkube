@@ -1,0 +1,66 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-log
+spec:
+  accessModes:
+  - ReadWriteMany
+  capacity:
+    storage: 50Mi
+  nfs:
+    path: /var/nfs 
+    server: 10.193.75.63
+#  hostPath:
+#    path: /pv/log
+#  persistentVolumeReclaimPolicy: Recycle
+  persistentVolumeReclaimPolicy: Delete
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: claim-log-1
+
+spec:
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 50Mi
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: webapp-deployment-pvc
+  name: webapp-deployment-pvc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: webapp-deployment-pvc
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: webapp-deployment-pvc
+    spec:
+      containers:
+      - name: event-simulator
+        image: kodekloud/event-simulator
+        env:
+        - name: LOG_HANDLERS
+          value: file
+        volumeMounts:
+        - mountPath: /log
+          name: log-volume
+
+      volumes:
+      - name: log-volume
+        persistentVolumeClaim:
+          claimName: claim-log-1
+
+status: {}

@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2019-06-22T18:06:36Z"
+  labels:
+    app: video1-256-video1-257
+    cliqr: 7cdc1561226816053
+    tier: video1
+  name: video-http-257-5007f3
+  namespace: default
+  resourceVersion: "9403133"
+  selfLink: /api/v1/namespaces/default/services/http-257-5007f3
+  uid: 79df815d-9518-11e9-a187-005056b33582
+spec:
+  ports:
+  - name: http-257-5007f
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: video1-256-video1-257
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}

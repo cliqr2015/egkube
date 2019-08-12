@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+    namespace: default
+    name: bootcamp
+spec:
+    type: NodePort
+    ports:
+      - name: http 
+        targetPort: 8080
+        port: 8080
+        nodePort: 30008
+        protocol: TCP
+    selector:
+      run: bootcamp
+      pod-template-hash: df7fb97b7

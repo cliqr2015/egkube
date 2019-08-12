@@ -1,0 +1,6 @@
+Post script called at Fri Aug  2 07:02:26 UTC 2019
+#################
+Appliance Install
+#################
+Installing version 4.10.0.4
+psql: could not translate host name "-U" to address: Name or service not known

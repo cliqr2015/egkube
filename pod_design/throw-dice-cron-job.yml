@@ -1,0 +1,26 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  creationTimestamp: null
+  labels:
+    run: throw-dice-cron-job
+  name: throw-dice-cron-job
+spec:
+  concurrencyPolicy: Allow
+  jobTemplate:
+    metadata:
+      creationTimestamp: null
+    spec:
+      template:
+        metadata:
+          creationTimestamp: null
+          labels:
+            run: throw-dice-cron-job
+        spec:
+          containers:
+          - image: kodekloud/throw-dice
+            name: throw-dice-cron-job
+            resources: {}
+          restartPolicy: OnFailure
+  schedule: 30 21 * * *
+status: {}
