@@ -1,0 +1,14 @@
+# create configMap from file:
+kubectl create cm fruit-service-ambassador-config --from-file=./haproxy.cfg
+
+# Run busybox with curl and sleep 3600:
+kubectl run busybox --image=radial/busyboxplus:curl  --restart=Never -- sleep 3600
+
+# curl to podIP
+kubectl exec busybox -- curl $(kubectl get pod fruit-service -o=custom-columns=IP:.status.podIP --no-headers):80
+-- or from node itself:
+curl $(kubectl get pod fruit-service -o=custom-columns=IP:.status.podIP --no-headers):80
+
+
+
+

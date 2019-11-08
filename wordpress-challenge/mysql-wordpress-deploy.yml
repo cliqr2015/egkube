@@ -35,6 +35,15 @@ spec:
       containers:
       - image: mysql:5.7
         name: mysql
+        resources:
+          limits:
+            cpu: "0.5"
+          requests:
+            cpu: "0.25"
+#        args:
+#        - -cpus
+#        - "2"
+
         env:
         - name: MYSQL_ROOT_PASSWORD
           valueFrom:
@@ -100,6 +109,11 @@ spec:
             secretKeyRef:
               name: mysql-pass
               key: password
+        resources:
+          limits:
+            cpu: 0.5
+          requests:
+            cpu: 0.25
         ports:
         - containerPort: 80
           name: wordpress

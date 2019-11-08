@@ -10,8 +10,10 @@ spec:
   nfs:
     path: /var/nfs 
     server: 10.193.75.63
+# ***** If you want use storage of node use hostPath : *****
 #  hostPath:
 #    path: /pv/log
+# *****  
 #  persistentVolumeReclaimPolicy: Recycle
   persistentVolumeReclaimPolicy: Delete
 

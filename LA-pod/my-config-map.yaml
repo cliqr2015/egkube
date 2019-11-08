@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-config-map
+data: 
+  myKey: myValue
+  anotherKey: anotherValue
+  example.property.1: hello
+  example.property.2: world
+
+  MyDataExample: |-
+    Param01=01
+    Param02=02

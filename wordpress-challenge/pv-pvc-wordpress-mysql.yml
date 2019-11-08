@@ -9,7 +9,8 @@ spec:
 #  volumeMode: Filesystem
   accessModes:
     - ReadWriteMany
-  persistentVolumeReclaimPolicy: Recycle
+#  persistentVolumeReclaimPolicy: Recycle
+  persistentVolumeReclaimPolicy: Delete
   nfs:
     path: /html
     server: nfs01
@@ -40,7 +41,8 @@ spec:
 #  volumeMode: Filesystem
   accessModes:
     - ReadWriteMany
-  persistentVolumeReclaimPolicy: Recycle
+#  persistentVolumeReclaimPolicy: Recycle
+  persistentVolumeReclaimPolicy: Delete
   nfs:
     path: /mysql
     server: nfs01
@@ -69,5 +71,6 @@ type: Opaque
 data:
 #  username: YWRtaW4=
 # echo -n 'admin' | base64 
+# decode : echo 'YWRtaW4=' | base64 -d
   password: YWRtaW4=
 

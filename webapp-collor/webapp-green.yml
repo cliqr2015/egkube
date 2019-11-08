@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: webapp-green
+  name: webapp-green
+spec:
+  containers:
+  - image: kodekloud/webapp-color
+    name: webapp-green
+#    command:
+#  As argument supports one of the collors red,green,blue,blue2,pink,darkblue
+    args:
+    - "--color"
+    - "blue"
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}
